@@ -1,3 +1,4 @@
+let sepet = []
 fetch("urunler.json")
     .then(res => res.json())
     .then(value => {
@@ -19,7 +20,6 @@ fetch("urunler.json")
         urunler.innerHTML = gelenUrunler.join("")
 
         //!sepeteEkle
-        let sepet = []
         let sepeteEkle = document.querySelectorAll(".sepeteEkle")
         for (const i of sepeteEkle) {
             i.addEventListener("click", function (evet) {
@@ -37,13 +37,44 @@ fetch("urunler.json")
                     price: price,
                 }
                 sepet.push(eklenenSepet)
+                console.log(sepet)
+                sepetGuncelle()
             })
         }
-
-
-        //!sepetiListele
-        for (const i of sepet) {
-            console.log
-        }
-
     })
+
+
+let toplamFiyatText = document.createElement("h2")
+
+
+const sepetGuncelle = () => {
+    let sepetYazdir = sepet.map((value, index) => {
+        return `
+            <div class="sepetCard">
+                <h6 class="sepetTitle">${value.title}</h6>
+                <p class="sepetPrice">${value.price}</p>
+                <button class="delete" data-index="${index}">delete</button>
+            </div>
+        `
+    })
+    document.querySelector(".sepet").innerHTML = sepetYazdir.join("")
+
+    //!sepet toplamı
+    let sepetToplam = 0
+    for (const i of sepet) {
+        sepetToplam += i.price
+    }
+    toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
+    document.querySelector(".sepet").appendChild(toplamFiyatText);
+
+
+    //!sepet delete
+    let deleteButtons = document.querySelectorAll(".delete");
+    for (const button of deleteButtons) {
+        button.addEventListener("click", function (event) {
+            let index = event.target.dataset.index;
+            sepet.splice(index, 1);
+            sepetGuncelle();
+        });
+    }
+} 
