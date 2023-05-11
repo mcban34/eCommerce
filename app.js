@@ -1,20 +1,26 @@
 let sepet = []
-fetch("urunler.json")
+let urunId = 0
+fetch("https://fakestoreapi.com/products")
     .then(res => res.json())
     .then(value => {
         console.log(value);
 
         //!ürün filtrele
-        let urunler = document.querySelector(".urunler")
+        let urunler = document.querySelector(".urunlerRow")
         let gelenUrunler = value.map(val => {
+            urunId++
             return `
-            <div class="card">
-                <img class="cardImg" src="${val.image}">
-                <h2 class="cardTitle">${val.title}</h2>
-                <h4 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h4>
-                <button class="sepeteEkle">Sepete Ekle</button>
+            <div class="col-md-3">
+                <div class="shopCard mt-5">
+                    <div class="cardImgParent">
+                        <img class="cardImg" src="${val.image}">
+                    </div>
+                    <h4 class="cardTitle">${val.title}</h4>
+                    <h5 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h5>
+                    <button class="sepeteEkle">Sepete Ekle</button>
+                    <a class="urunIncele" data-id="${urunId}">Ürün İncele</a>
+                </div>
             </div>
-        
         `
         })
         urunler.innerHTML = gelenUrunler.join("")
@@ -41,6 +47,7 @@ fetch("urunler.json")
                 sepetGuncelle()
             })
         }
+        urunDetay()
     })
 
 
@@ -78,3 +85,15 @@ const sepetGuncelle = () => {
         });
     }
 } 
+
+const urunDetay = () =>{
+    let urunIncele = document.querySelectorAll(".urunIncele")
+    console.log(urunIncele);
+    for (const i of urunIncele) {
+        i.addEventListener("click",function(){
+            const urunId =  i.getAttribute('data-id');
+            window.location.href=`product-detail.html?id=${urunId}`
+        })
+    }
+}
+
