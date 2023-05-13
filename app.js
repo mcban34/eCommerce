@@ -1,6 +1,6 @@
 let sepet = []
 let urunId = 0
-fetch("https://fakestoreapi.com/products")
+fetch("public/product.json")
     .then(res => res.json())
     .then(value => {
         console.log(value);
@@ -97,3 +97,19 @@ const urunDetay = () =>{
     }
 }
 
+
+
+
+// fetch("public/product.json")
+// .then(res => res.json())
+// .then(value => {
+//     console.log(value)
+
+//     let xx = value.map(value => {
+//         return `
+//             <img src="${value.image}"> 
+//         `
+//     })
+
+//     document.body.innerHTML=xx
+// })

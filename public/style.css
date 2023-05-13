@@ -9,7 +9,9 @@ img {
      object-fit: scale-down;
 }
 .shopCard .cardImgParent img {
+  width: 85%;
   height: 100%;
+  text-align: center;
 }
 .shopCard h4 {
   overflow: hidden;

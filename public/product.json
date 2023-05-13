@@ -1,0 +1,138 @@
+[
+    {
+        "category":"Atıştırmalık",
+        "description":"browni",
+        "id":1,
+        "image":"./public/img/browni.jpeg",
+        "price":10,
+        "title":"4'lü Browni"
+    },
+    {
+        "category":"Atıştırmalık",
+        "description":"Çizi",
+        "id":2,
+        "image":"./public/img/cizi.jpg",
+        "price":5,
+        "title":"Çizi Çıtır"
+    },
+    {
+        "category":"Atıştırmalık",
+        "description":"Dankek Lokmalık",
+        "id":3,
+        "image":"./public/img/dankek.jpg",
+        "price":8,
+        "title":"Dankek Lokmalık"
+    },
+    {
+        "category":"Atıştırmalık",
+        "description":"Haribo Goldbears",
+        "id":4,
+        "image":"./public/img/haribo.jpg",
+        "price":12,
+        "title":"Haribo Goldbears"
+    },
+    {
+        "category":"Atıştırmalık",
+        "description":"Lays - Ruffles",
+        "id":5,
+        "image":"./public/img/lays-ruffels.jpg",
+        "price":25,
+        "title":"Lays - Ruffles"
+    },
+    {
+        "category":"İçecek",
+        "description":"12'li Kuzeyden Su",
+        "id":6,
+        "image":"./public/img/12likuzeyden.jpg",
+        "price":36,
+        "title":"12'li Kuzeyden Su"
+    },
+    {
+        "category":"İçecek",
+        "description":"Çamlıca Gazoz",
+        "id":7,
+        "image":"./public/img/camlica.jpeg",
+        "price":12,
+        "title":"Çamlıca Gazoz"
+    },
+    {
+        "category":"İçecek",
+        "description":"Cola - Fanta - Sprite",
+        "id":8,
+        "image":"./public/img/cola-fanta-sprite.jpg",
+        "price":55,
+        "title":"Cola - Fanta - Sprite"
+    },
+    {
+        "category":"İçecek",
+        "description":"Fusetea - Cappy",
+        "id":9,
+        "image":"./public/img/fusetea-cappy.jpg",
+        "price":35,
+        "title":"Fusetea - Cappy"
+    },
+    {
+        "category":"İçecek",
+        "description":"Kuzeyden Su",
+        "id":10,
+        "image":"./public/img/kuzeyden.jpeg",
+        "price":2,
+        "title":"Kuzeyden Su"
+    },
+    {
+        "category":"Meyve-Sebze",
+        "description":"Ananas",
+        "id":11,
+        "image":"./public/img/ananas.jpeg",
+        "price":30,
+        "title":"Ananas"
+    },
+    {
+        "category":"Meyve-Sebze",
+        "description":"Domates",
+        "id":12,
+        "image":"./public/img/domates.jpeg",
+        "price":15,
+        "title":"Domates"
+    },
+    {
+        "category":"Meyve-Sebze",
+        "description":"Elma",
+        "id":13,
+        "image":"./public/img/elma.jpeg",
+        "price":8,
+        "title":"Elma"
+    },
+    {
+        "category":"Meyve-Sebze",
+        "description":"Muz",
+        "id":14,
+        "image":"./public/img/muz.jpeg",
+        "price":40,
+        "title":"Muz"
+    },
+    {
+        "category":"Kişisel-Bakım",
+        "description":"Clear - Rexona",
+        "id":15,
+        "image":"./public/img/clear.jpg",
+        "price":50,
+        "title":"Clear - Rexona"
+    },
+    {
+        "category":"Kişisel-Bakım",
+        "description":"Listerine",
+        "id":16,
+        "image":"./public/img/listerine.jpeg",
+        "price":40,
+        "title":"Listerine"
+    },
+    {
+        "category":"Kişisel-Bakım",
+        "description":"Signal",
+        "id":17,
+        "image":"./public/img/signal.jpeg",
+        "price":23,
+        "title":"Signal"
+    }
+]
