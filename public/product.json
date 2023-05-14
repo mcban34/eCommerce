@@ -4,7 +4,11 @@
         "description":"browni",
         "id":1,
         "image":"./public/img/browni.jpeg",
-        "price":10,
+        "price":
+            {
+                "newPrice":12,
+                "oldprice":14
+            },
         "title":"4'lü Browni",
         "rating":4.6
     },
@@ -13,7 +17,11 @@
         "description":"Çizi",
         "id":2,
         "image":"./public/img/cizi.jpg",
-        "price":5,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Çizi Çıtır",
         "rating":2.7
     },
@@ -22,7 +30,11 @@
         "description":"Dankek Lokmalık",
         "id":3,
         "image":"./public/img/dankek.jpg",
-        "price":8,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Dankek Lokmalık",
         "rating":4.4
     },
@@ -31,7 +43,11 @@
         "description":"Haribo Goldbears",
         "id":4,
         "image":"./public/img/haribo.jpg",
-        "price":12,
+        "price":
+        {
+            "newPrice":35.45,
+            "oldprice":45.00
+        },
         "title":"Haribo Goldbears",
         "rating":3.9
     },
@@ -40,7 +56,11 @@
         "description":"Lays - Ruffles",
         "id":5,
         "image":"./public/img/lays-ruffels.jpg",
-        "price":25,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Lays - Ruffles",
         "rating":5
     },
@@ -49,7 +69,11 @@
         "description":"12'li Kuzeyden Su",
         "id":6,
         "image":"./public/img/12likuzeyden.jpg",
-        "price":36,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"12'li Kuzeyden Su",
         "rating":3
     },
@@ -58,7 +82,11 @@
         "description":"Çamlıca Gazoz",
         "id":7,
         "image":"./public/img/camlica.jpeg",
-        "price":12,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Çamlıca Gazoz",
         "rating":4
     },
@@ -67,7 +95,11 @@
         "description":"Cola - Fanta - Sprite",
         "id":8,
         "image":"./public/img/cola-fanta-sprite.jpg",
-        "price":55,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Cola - Fanta - Sprite",
         "rating":2.7
     },
@@ -76,7 +108,11 @@
         "description":"Fusetea - Cappy",
         "id":9,
         "image":"./public/img/fusetea-cappy.jpg",
-        "price":35,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Fusetea - Cappy",
         "rating":1
     },
@@ -85,7 +121,11 @@
         "description":"Kuzeyden Su",
         "id":10,
         "image":"./public/img/kuzeyden.jpeg",
-        "price":2,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Kuzeyden Su",
         "rating":4
     },
@@ -94,7 +134,11 @@
         "description":"Ananas",
         "id":11,
         "image":"./public/img/ananas.jpeg",
-        "price":30,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Ananas",
         "rating":5
     },
@@ -103,7 +147,11 @@
         "description":"Domates",
         "id":12,
         "image":"./public/img/domates.jpeg",
-        "price":15,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Domates",
         "rating":3
     },
@@ -112,7 +160,11 @@
         "description":"Elma",
         "id":13,
         "image":"./public/img/elma.jpeg",
-        "price":8,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Elma",
         "rating":4
     },
@@ -121,7 +173,11 @@
         "description":"Muz",
         "id":14,
         "image":"./public/img/muz.jpeg",
-        "price":40,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Muz",
         "rating":5
     },
@@ -130,7 +186,11 @@
         "description":"Clear - Rexona",
         "id":15,
         "image":"./public/img/clear.jpg",
-        "price":50,
+        "price":
+        {
+            "newPrice":12,
+            "oldprice":14
+        },
         "title":"Clear - Rexona",
         "rating":4.2
     },
@@ -139,7 +199,11 @@
         "description":"Listerine",
         "id":16,
         "image":"./public/img/listerine.jpeg",
-        "price":40,
+        "price":
+        {
+            "newPrice":75.99,
+            "oldprice":80.55
+        },
         "title":"Listerine",
         "rating":4
     },
@@ -148,7 +212,11 @@
         "description":"Signal",
         "id":17,
         "image":"./public/img/signal.jpeg",
-        "price":23,
+        "price":
+        {
+            "newPrice":45.75,
+            "oldprice":55.10
+        },
         "title":"Signal",
         "rating":4
     }

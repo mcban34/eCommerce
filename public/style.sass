@@ -11,7 +11,6 @@ img
     border: 1px solid rgba(0,0,0,.1)
     padding: 1rem
     border-radius: .5rem
-    text-align: center
     transition: .38s
     .cardImgParent
         width: 100% 
@@ -22,25 +21,39 @@ img
         background: transparent
         border: none
         position: absolute
-        right: 10px
-        top: 10px
-        box-shadow: $boxShadow
+        right: 15px
+        bottom: 15px
+        border-radius: 10px
+        background: transparentize($orange,.9)
+        transition: .38s
+        color: $orange
+
         .bi-plus
             font-size: 1.8rem
-            color: $orange
+        &:hover
+            background: transparentize($orange,0)
+            color: white !important
+
     .urunIncele
         cursor: pointer
         color: $black
         text-decoration: none
-        // h4
-        //     color: $orange
-
+        .cardPrice
+            color:$orange
+        &:hover .cardTitle
+            color: $orange
+        .oldPrice
+            font-size: 1rem
+            color: $gray
+            text-decoration: line-through
+                
     .rating-stars
         .bi-star-fill
             color: #FFD27D
         .bi-star
             color: #FFD27D
+        .ratingHtml
+            color:  $gray
     &:hover
         border-color: $orange
         box-shadow: $boxShadow
-    

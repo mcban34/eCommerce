@@ -27,11 +27,11 @@ fetch("public/product.json")
                             <img class="cardImg" src="${val.image}">
                         </div>
                         <a class="urunIncele" data-id="${urunId}">
-                            <h4 class="cardTitle">${val.title}</h4>
-                            <h5 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h5>
+                            <h5 class="cardTitle">${val.title}</h5>
+                            <h5 class="cardPrice">Fiyat : <span class="price">${val.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${val.price.oldprice.toFixed(2)}₺</span></h5>
                         </a>
                         <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
-                        <div class="rating-stars">${ratingHtml}</div>
+                        <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${val.rating})</span></div>
                     </div>
                 </div>
             `

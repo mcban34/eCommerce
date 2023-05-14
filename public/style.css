@@ -7,7 +7,6 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
   border-radius: 0.5rem;
-  text-align: center;
   transition: 0.38s;
 }
 .shopCard .cardImgParent {
@@ -21,24 +20,44 @@ img {
   background: transparent;
   border: none;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 10px;
+  background: rgba(252, 110, 30, 0.1);
+  transition: 0.38s;
+  color: #FC6E1E;
 }
 .shopCard .sepeteEkle .bi-plus {
   font-size: 1.8rem;
-  color: #FC6E1E;
+}
+.shopCard .sepeteEkle:hover {
+  background: #fc6e1e;
+  color: white !important;
 }
 .shopCard .urunIncele {
   cursor: pointer;
   color: #3a3a3a;
   text-decoration: none;
 }
+.shopCard .urunIncele .cardPrice {
+  color: #FC6E1E;
+}
+.shopCard .urunIncele:hover .cardTitle {
+  color: #FC6E1E;
+}
+.shopCard .urunIncele .oldPrice {
+  font-size: 1rem;
+  color: #9B958E;
+  text-decoration: line-through;
+}
 .shopCard .rating-stars .bi-star-fill {
   color: #FFD27D;
 }
 .shopCard .rating-stars .bi-star {
   color: #FFD27D;
+}
+.shopCard .rating-stars .ratingHtml {
+  color: #9B958E;
 }
 .shopCard:hover {
   border-color: #FC6E1E;
