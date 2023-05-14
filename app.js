@@ -10,15 +10,19 @@ fetch("public/product.json")
         let gelenUrunler = value.map(val => {
 
             //!stars
-            let ratingStars = [];
-            for (let i = 0; i < val['rating']; i++) {
-                ratingStars.push('<i class="bi bi-star-fill"></i>');
-            }
-            for (let i = 0; i < 5 - val['rating']; i++) {
-                ratingStars.push('<i class="bi bi-star"></i>');
-            }
-            const ratingHtml = ratingStars.join('');
-        
+            for (let i = 0; i < value.length; i++) {
+                let product = value[i];
+                let ratingStars = [];
+                for (let j = 0; j < product.rating; j++) {
+                  ratingStars.push('<i class="bi bi-star-fill"></i>');
+                }
+                for (let j = product.rating; j < 5; j++) {
+                  ratingStars.push('<i class="bi bi-star"></i>');
+                }
+                ratingHtml = ratingStars.join('');
+              }
+
+            
             urunId++
             return `
                 <div class="col-md-3">
