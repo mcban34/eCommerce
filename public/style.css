@@ -2,20 +2,42 @@ img {
   width: 100%;
 }
 
+.shopCard {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: 0.38s;
+}
 .shopCard .cardImgParent {
   width: 100%;
-  height: 300px;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
 }
 .shopCard .cardImgParent img {
-  width: 85%;
-  height: 100%;
+  width: 100%;
   text-align: center;
 }
-.shopCard h4 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-height: 2.4em;
+.shopCard .sepeteEkle {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.shopCard .sepeteEkle .bi-plus {
+  font-size: 2rem;
+  color: #FC6E1E;
+}
+.shopCard .urunIncele {
+  cursor: pointer;
+  color: #3a3a3a;
+  text-decoration: none;
+}
+.shopCard .urunIncele h5 {
+  color: #FC6E1E;
+}
+.shopCard:hover {
+  border-color: #FC6E1E;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }/*# sourceMappingURL=style.css.map */

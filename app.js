@@ -15,10 +15,11 @@ fetch("public/product.json")
                     <div class="cardImgParent">
                         <img class="cardImg" src="${val.image}">
                     </div>
-                    <h4 class="cardTitle">${val.title}</h4>
-                    <h5 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h5>
-                    <button class="sepeteEkle">Sepete Ekle</button>
-                    <a class="urunIncele" data-id="${urunId}">Ürün İncele</a>
+                    <a class="urunIncele" data-id="${urunId}">
+                        <h4 class="cardTitle">${val.title}</h4>
+                        <h5 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h5>
+                    </a>
+                    <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
                 </div>
             </div>
         `
@@ -32,10 +33,13 @@ fetch("public/product.json")
 
                 let element = evet.target
                 let card = element.parentNode
+                let cardParentNode = card.parentNode
 
-                let img = card.querySelector(".cardImg").src
-                let title = card.querySelector(".cardTitle").innerHTML
-                let price = Number(card.querySelector(".price").innerHTML)
+                console.log(cardParentNode);
+
+                let img = cardParentNode.querySelector(".cardImg").src
+                let title = cardParentNode.querySelector(".cardTitle").innerHTML
+                let price = Number(cardParentNode.querySelector(".price").innerHTML)
 
                 let eklenenSepet = {
                     img: img,
