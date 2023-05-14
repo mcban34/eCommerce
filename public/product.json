@@ -5,7 +5,8 @@
         "id":1,
         "image":"./public/img/browni.jpeg",
         "price":10,
-        "title":"4'lü Browni"
+        "title":"4'lü Browni",
+        "rating":4.6
     },
     {
         "category":"Atıştırmalık",
@@ -13,7 +14,8 @@
         "id":2,
         "image":"./public/img/cizi.jpg",
         "price":5,
-        "title":"Çizi Çıtır"
+        "title":"Çizi Çıtır",
+        "rating":2.7
     },
     {
         "category":"Atıştırmalık",
@@ -21,7 +23,8 @@
         "id":3,
         "image":"./public/img/dankek.jpg",
         "price":8,
-        "title":"Dankek Lokmalık"
+        "title":"Dankek Lokmalık",
+        "rating":4.4
     },
     {
         "category":"Atıştırmalık",
@@ -29,7 +32,8 @@
         "id":4,
         "image":"./public/img/haribo.jpg",
         "price":12,
-        "title":"Haribo Goldbears"
+        "title":"Haribo Goldbears",
+        "rating":3.9
     },
     {
         "category":"Atıştırmalık",
@@ -37,7 +41,8 @@
         "id":5,
         "image":"./public/img/lays-ruffels.jpg",
         "price":25,
-        "title":"Lays - Ruffles"
+        "title":"Lays - Ruffles",
+        "rating":5
     },
     {
         "category":"İçecek",
@@ -45,7 +50,8 @@
         "id":6,
         "image":"./public/img/12likuzeyden.jpg",
         "price":36,
-        "title":"12'li Kuzeyden Su"
+        "title":"12'li Kuzeyden Su",
+        "rating":3
     },
     {
         "category":"İçecek",
@@ -53,7 +59,8 @@
         "id":7,
         "image":"./public/img/camlica.jpeg",
         "price":12,
-        "title":"Çamlıca Gazoz"
+        "title":"Çamlıca Gazoz",
+        "rating":4
     },
     {
         "category":"İçecek",
@@ -61,7 +68,8 @@
         "id":8,
         "image":"./public/img/cola-fanta-sprite.jpg",
         "price":55,
-        "title":"Cola - Fanta - Sprite"
+        "title":"Cola - Fanta - Sprite",
+        "rating":2.7
     },
     {
         "category":"İçecek",
@@ -69,7 +77,8 @@
         "id":9,
         "image":"./public/img/fusetea-cappy.jpg",
         "price":35,
-        "title":"Fusetea - Cappy"
+        "title":"Fusetea - Cappy",
+        "rating":1
     },
     {
         "category":"İçecek",
@@ -77,7 +86,8 @@
         "id":10,
         "image":"./public/img/kuzeyden.jpeg",
         "price":2,
-        "title":"Kuzeyden Su"
+        "title":"Kuzeyden Su",
+        "rating":4
     },
     {
         "category":"Meyve-Sebze",
@@ -85,7 +95,8 @@
         "id":11,
         "image":"./public/img/ananas.jpeg",
         "price":30,
-        "title":"Ananas"
+        "title":"Ananas",
+        "rating":5
     },
     {
         "category":"Meyve-Sebze",
@@ -93,7 +104,8 @@
         "id":12,
         "image":"./public/img/domates.jpeg",
         "price":15,
-        "title":"Domates"
+        "title":"Domates",
+        "rating":3
     },
     {
         "category":"Meyve-Sebze",
@@ -101,7 +113,8 @@
         "id":13,
         "image":"./public/img/elma.jpeg",
         "price":8,
-        "title":"Elma"
+        "title":"Elma",
+        "rating":4
     },
     {
         "category":"Meyve-Sebze",
@@ -109,7 +122,8 @@
         "id":14,
         "image":"./public/img/muz.jpeg",
         "price":40,
-        "title":"Muz"
+        "title":"Muz",
+        "rating":5
     },
     {
         "category":"Kişisel-Bakım",
@@ -117,7 +131,8 @@
         "id":15,
         "image":"./public/img/clear.jpg",
         "price":50,
-        "title":"Clear - Rexona"
+        "title":"Clear - Rexona",
+        "rating":4.2
     },
     {
         "category":"Kişisel-Bakım",
@@ -125,7 +140,8 @@
         "id":16,
         "image":"./public/img/listerine.jpeg",
         "price":40,
-        "title":"Listerine"
+        "title":"Listerine",
+        "rating":4
     },
     {
         "category":"Kişisel-Bakım",
@@ -133,6 +149,7 @@
         "id":17,
         "image":"./public/img/signal.jpeg",
         "price":23,
-        "title":"Signal"
+        "title":"Signal",
+        "rating":4
     }
 ]

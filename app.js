@@ -3,29 +3,41 @@ let urunId = 0
 fetch("public/product.json")
     .then(res => res.json())
     .then(value => {
-        console.log(value);
 
-        //!ürün filtrele
+        console.log(value);
+        
         let urunler = document.querySelector(".urunlerRow")
         let gelenUrunler = value.map(val => {
+
+            //!stars
+            let ratingStars = [];
+            for (let i = 0; i < val['rating']; i++) {
+                ratingStars.push('<i class="bi bi-star-fill"></i>');
+            }
+            for (let i = 0; i < 5 - val['rating']; i++) {
+                ratingStars.push('<i class="bi bi-star"></i>');
+            }
+            const ratingHtml = ratingStars.join('');
+        
             urunId++
             return `
-            <div class="col-md-3">
-                <div class="shopCard mt-5">
-                    <div class="cardImgParent">
-                        <img class="cardImg" src="${val.image}">
+                <div class="col-md-3">
+                    <div class="shopCard mt-5">
+                        <div class="cardImgParent">
+                            <img class="cardImg" src="${val.image}">
+                        </div>
+                        <a class="urunIncele" data-id="${urunId}">
+                            <h4 class="cardTitle">${val.title}</h4>
+                            <h5 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h5>
+                        </a>
+                        <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
+                        <div class="rating-stars">${ratingHtml}</div>
                     </div>
-                    <a class="urunIncele" data-id="${urunId}">
-                        <h4 class="cardTitle">${val.title}</h4>
-                        <h5 class="cardPrice">Fiyat : <span class="price">${val.price}</span>₺</h5>
-                    </a>
-                    <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
                 </div>
-            </div>
-        `
+            `
         })
-        urunler.innerHTML = gelenUrunler.join("")
-
+        urunler.innerHTML = gelenUrunler.join("");
+        
         //!sepeteEkle
         let sepeteEkle = document.querySelectorAll(".sepeteEkle")
         for (const i of sepeteEkle) {
@@ -35,7 +47,7 @@ fetch("public/product.json")
                 let card = element.parentNode
                 let cardParentNode = card.parentNode
 
-                console.log(cardParentNode);
+                // console.log(cardParentNode);
 
                 let img = cardParentNode.querySelector(".cardImg").src
                 let title = cardParentNode.querySelector(".cardTitle").innerHTML
@@ -47,7 +59,7 @@ fetch("public/product.json")
                     price: price,
                 }
                 sepet.push(eklenenSepet)
-                console.log(sepet)
+                // console.log(sepet)
                 sepetGuncelle()
             })
         }
@@ -88,32 +100,15 @@ const sepetGuncelle = () => {
             sepetGuncelle();
         });
     }
-} 
+}
 
-const urunDetay = () =>{
+const urunDetay = () => {
     let urunIncele = document.querySelectorAll(".urunIncele")
-    console.log(urunIncele);
+    // console.log(urunIncele);
     for (const i of urunIncele) {
-        i.addEventListener("click",function(){
-            const urunId =  i.getAttribute('data-id');
-            window.location.href=`product-detail.html?id=${urunId}`
+        i.addEventListener("click", function () {
+            const urunId = i.getAttribute('data-id');
+            window.location.href = `product-detail.html?id=${urunId}`
         })
     }
 }
-
-
-
-
-// fetch("public/product.json")
-// .then(res => res.json())
-// .then(value => {
-//     console.log(value)
-
-//     let xx = value.map(value => {
-//         return `
-//             <img src="${value.image}"> 
-//         `
-//     })
-
-//     document.body.innerHTML=xx
-// })
