@@ -6,11 +6,12 @@
         "image":"./public/img/browni.jpeg",
         "price":
             {
-                "newPrice":8,
-                "oldprice":14.75
+                "newPrice":4.8,
+                "oldprice":8
             },
         "title":"4'lü Browni",
-        "rating":4.6
+        "rating":4.6,
+        "ticket":"%40 İndirim"
     },
     {
         "category":"Atıştırmalık",
@@ -20,10 +21,11 @@
         "price":
         {
             "newPrice":6,
-            "oldprice":9
+            "oldprice":12
         },
         "title":"Çizi Çıtır",
-        "rating":2.7
+        "rating":2.7,
+        "ticket":"%50 İndirim"
     },
     {
         "category":"Atıştırmalık",

@@ -62,4 +62,13 @@ img {
 .shopCard:hover {
   border-color: #FC6E1E;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.shopCard .ticket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem 0 0.5rem 0;
+  color: white;
+  background: #fa3a3a;
 }/*# sourceMappingURL=style.css.map */

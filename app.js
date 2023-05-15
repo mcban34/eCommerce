@@ -34,11 +34,21 @@ fetch("public/product.json")
                         </a>
                         <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
                         <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${val.rating.toFixed(1)})</span></div>
+                        <div class="ticket">${val.ticket || ""}</div>
                     </div>
                 </div>
             `
         })
         urunler.innerHTML = gelenUrunler.join("");
+
+        //!etiket kontrol
+        let ticket = document.querySelectorAll(".ticket")
+        for (const i of ticket) {
+            if(i.innerHTML==""){
+                i.style.display="none"
+            }
+        }
+
         
         //!sepeteEkle
         let sepeteEkle = document.querySelectorAll(".sepeteEkle")
