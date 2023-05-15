@@ -6,8 +6,8 @@
         "image":"./public/img/browni.jpeg",
         "price":
             {
-                "newPrice":12,
-                "oldprice":14
+                "newPrice":8,
+                "oldprice":14.75
             },
         "title":"4'lü Browni",
         "rating":4.6
@@ -19,8 +19,8 @@
         "image":"./public/img/cizi.jpg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":6,
+            "oldprice":9
         },
         "title":"Çizi Çıtır",
         "rating":2.7
@@ -32,8 +32,8 @@
         "image":"./public/img/dankek.jpg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":20,
+            "oldprice":25.50
         },
         "title":"Dankek Lokmalık",
         "rating":4.4
@@ -58,11 +58,11 @@
         "image":"./public/img/lays-ruffels.jpg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":30.65,
+            "oldprice":45.50
         },
         "title":"Lays - Ruffles",
-        "rating":5
+        "rating":5.0
     },
     {
         "category":"İçecek",
@@ -84,8 +84,8 @@
         "image":"./public/img/camlica.jpeg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":25,
+            "oldprice":45.65
         },
         "title":"Çamlıca Gazoz",
         "rating":4
@@ -97,8 +97,8 @@
         "image":"./public/img/cola-fanta-sprite.jpg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":45,
+            "oldprice":65.75
         },
         "title":"Cola - Fanta - Sprite",
         "rating":2.7
@@ -110,8 +110,8 @@
         "image":"./public/img/fusetea-cappy.jpg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":35.65,
+            "oldprice":40
         },
         "title":"Fusetea - Cappy",
         "rating":1
@@ -123,8 +123,8 @@
         "image":"./public/img/kuzeyden.jpeg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":2,
+            "oldprice":3.75
         },
         "title":"Kuzeyden Su",
         "rating":4
@@ -136,8 +136,8 @@
         "image":"./public/img/ananas.jpeg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":20,
+            "oldprice":23.40
         },
         "title":"Ananas",
         "rating":5
@@ -149,8 +149,8 @@
         "image":"./public/img/domates.jpeg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":20,
+            "oldprice":24.55
         },
         "title":"Domates",
         "rating":3
@@ -162,7 +162,7 @@
         "image":"./public/img/elma.jpeg",
         "price":
         {
-            "newPrice":12,
+            "newPrice":10,
             "oldprice":14
         },
         "title":"Elma",
@@ -175,8 +175,8 @@
         "image":"./public/img/muz.jpeg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":16,
+            "oldprice":18.90
         },
         "title":"Muz",
         "rating":5
@@ -188,8 +188,8 @@
         "image":"./public/img/clear.jpg",
         "price":
         {
-            "newPrice":12,
-            "oldprice":14
+            "newPrice":65.45,
+            "oldprice":99.90
         },
         "title":"Clear - Rexona",
         "rating":4.2

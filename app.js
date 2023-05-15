@@ -10,17 +10,15 @@ fetch("public/product.json")
         let gelenUrunler = value.map(val => {
 
             //!stars
-            for (let i = 0; i < value.length; i++) {
-                let product = value[i];
-                let ratingStars = [];
-                for (let j = 0; j < product.rating; j++) {
-                  ratingStars.push('<i class="bi bi-star-fill"></i>');
-                }
-                for (let j = product.rating; j < 5; j++) {
-                  ratingStars.push('<i class="bi bi-star"></i>');
-                }
-                ratingHtml = ratingStars.join('');
-              }
+            let ratingStars = [];
+            for (let j = 0; j < parseInt(val.rating); j++) {
+                ratingStars.push('<i class="bi bi-star-fill"></i>');
+            }
+            for (let j = 0; j < 5 - parseInt(val.rating); j++) {
+                ratingStars.push('<i class="bi bi-star"></i>');
+            }
+            let ratingHtml = ratingStars.join('');
+              
 
             
             urunId++
@@ -35,7 +33,7 @@ fetch("public/product.json")
                             <h5 class="cardPrice">Fiyat : <span class="price">${val.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${val.price.oldprice.toFixed(2)}₺</span></h5>
                         </a>
                         <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
-                        <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${val.rating})</span></div>
+                        <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${val.rating.toFixed(1)})</span></div>
                     </div>
                 </div>
             `
