@@ -38,7 +38,8 @@
             "oldprice":25.50
         },
         "title":"Dankek Lokmalık",
-        "rating":4.4
+        "rating":4.4,
+        "ticket":"Yeni Ürün"
     },
     {
         "category":"Atıştırmalık",

@@ -47,6 +47,9 @@ fetch("public/product.json")
             if(i.innerHTML==""){
                 i.style.display="none"
             }
+            if(i.innerHTML=="Yeni Ürün"){
+                i.style.background="#0fb942"
+            }
         }
 
         
