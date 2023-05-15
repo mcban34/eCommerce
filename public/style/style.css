@@ -1,5 +1,34 @@
-img {
+.sepetContent {
+  position: fixed;
+  margin-top: 3rem;
+}
+.sepetContent .sepet {
   width: 100%;
+}
+.sepetContent .sepet .sepetCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: 1rem;
+  padding: 0rem 0.5rem;
+}
+.sepetContent .sepet .sepetCard .sepetCardContent {
+  text-align: end;
+}
+.sepetContent .sepet .sepetCard .sepetCardContent .sepetPrice, .sepetContent .sepet .sepetCard .sepetCardContent .delete {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.sepetContent .sepet .sepetCard .sepetCardContent .delete {
+  background: transparent;
+  border: none;
+  color: #9B958E;
+}
+.sepetContent .sepet .sepetCard .sepetCardContent .sepetPrice {
+  color: #FC6E1E;
 }
 
 .shopCard {

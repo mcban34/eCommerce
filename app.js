@@ -20,10 +20,9 @@ fetch("public/product.json")
             let ratingHtml = ratingStars.join('');
               
 
-            
             urunId++
             return `
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="shopCard mt-5">
                         <div class="cardImgParent">
                             <img class="cardImg" src="${val.image}">
@@ -62,7 +61,6 @@ fetch("public/product.json")
                 let card = element.parentNode
                 let cardParentNode = card.parentNode
 
-                // console.log(cardParentNode);
 
                 let img = cardParentNode.querySelector(".cardImg").src
                 let title = cardParentNode.querySelector(".cardTitle").innerHTML
@@ -74,7 +72,6 @@ fetch("public/product.json")
                     price: price,
                 }
                 sepet.push(eklenenSepet)
-                // console.log(sepet)
                 sepetGuncelle()
             })
         }
@@ -86,12 +83,18 @@ let toplamFiyatText = document.createElement("h2")
 
 
 const sepetGuncelle = () => {
+    // console.log(sepet);
     let sepetYazdir = sepet.map((value, index) => {
         return `
             <div class="sepetCard">
-                <h6 class="sepetTitle">${value.title}</h6>
-                <p class="sepetPrice">${value.price}</p>
-                <button class="delete" data-index="${index}">delete</button>
+                <div class="sepetCardImg">
+                    <img width="100" src="${value.img}">
+                </div>
+                <div class="sepetCardContent">
+                    <h6 class="sepetTitle">${value.title}</h6>
+                    <p class="sepetPrice">${value.price}₺</p>
+                    <button class="delete" data-index="${index}"><i class="bi bi-trash"></i></button>
+                </div>
             </div>
         `
     })

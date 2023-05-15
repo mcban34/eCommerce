@@ -4,8 +4,37 @@ $red : #fa3a3a
 $gray : #9B958E
 $black : #3a3a3a
 
-img
-    width: 100%
+// img
+//     width: 100%
+
+.sepetContent
+    position: fixed
+    margin-top: 3rem
+    .sepet
+        width: 100%
+        .sepetCard
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            box-shadow: $boxShadow
+            margin-top: 1rem
+            padding: 0rem .5rem
+            .sepetCardContent
+                text-align: end
+                .sepetPrice,.delete
+                    display: inline-block
+                    margin: 0 !important
+                    padding: 0 !important
+                .delete
+                    background: transparent
+                    border: none
+                    color: $gray
+                .sepetPrice
+                    color: $orange
+                    
+                    
+             
 
 .shopCard
     position: relative
