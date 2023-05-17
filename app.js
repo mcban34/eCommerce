@@ -56,7 +56,6 @@ fetch("public/product.json")
         let sepeteEkle = document.querySelectorAll(".sepeteEkle")
         for (const i of sepeteEkle) {
             i.addEventListener("click", function (evet) {
-
                 let element = evet.target
                 let card = element.parentNode
                 let cardParentNode = card.parentNode
@@ -93,7 +92,7 @@ const sepetGuncelle = () => {
                 <div class="sepetCardContent">
                     <h6 class="sepetTitle">${value.title}</h6>
                     <p class="sepetPrice">${value.price}₺</p>
-                    <button class="delete" data-index="${index}"><i class="bi bi-trash"></i></button>
+                    <i data-index="${index}" class="bi bi-trash delete"></i>
                 </div>
             </div>
         `
@@ -114,6 +113,7 @@ const sepetGuncelle = () => {
     for (const button of deleteButtons) {
         button.addEventListener("click", function (event) {
             let index = event.target.dataset.index;
+            console.log(index)
             sepet.splice(index, 1);
             sepetGuncelle();
         });
