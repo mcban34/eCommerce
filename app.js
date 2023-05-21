@@ -71,9 +71,28 @@ fetch("public/product.json")
         let allProductBtn = document.createElement("button") 
         allProductBtn.innerHTML="Tüm Ürünler"
         allProductBtn.className="allProducts"
+
      
         document.querySelector(".categoryContent").innerHTML=categoryHTML.join("")
         document.querySelector(".categoryContent").prepend(allProductBtn);
+
+        const buttons = document.querySelectorAll(".categoryBtn");
+        const buttonClickHandler = (event) => {
+            // Tüm butonlardan sınıfı kaldırın
+            buttons.forEach((button) => {
+              button.classList.remove("activeCategory");
+            });
+          
+            // Tıklanan butona sınıfı ekle
+            event.target.classList.add("activeCategory");
+          };
+          
+          // Her bir butona tıklama olay dinleyicisi ekleyin
+          buttons.forEach((button) => {
+            button.addEventListener("click", buttonClickHandler);
+        });
+          
+          
 
         allProductBtn.addEventListener("click",() => {
             let allProductHtml = allProduct.map(value => {
@@ -97,7 +116,6 @@ fetch("public/product.json")
             urunler.innerHTML = allProductHtml.join("");
             ticketCheck();
             sepeteEkle()
-
         })
 
         let categoryBtn = document.querySelectorAll(".categoryBtn");

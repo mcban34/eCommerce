@@ -91,8 +91,16 @@ $black : #3a3a3a
         background: $red
 .category
     .categoryContent
-        ul
-            padding: 0
-            margin: 0
-            li
-                display: inline-block
+        .categoryBtn,.allProducts
+            color: $black
+            border: none
+            background: transparent
+            border: 1px solid $orange
+            padding: 1rem
+            border-radius: 3px
+            margin-left:1rem
+            &:first-child
+                margin-left: 0 !important
+        .activeCategory
+            background: $orange
+            color: white
