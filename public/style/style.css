@@ -100,4 +100,12 @@
   border-radius: 0.5rem 0 0.5rem 0;
   color: white;
   background: #fa3a3a;
+}
+
+.category .categoryContent ul {
+  padding: 0;
+  margin: 0;
+}
+.category .categoryContent ul li {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */
