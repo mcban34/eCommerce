@@ -7,7 +7,7 @@ fetch("public/product.json")
 
         let allProduct = value;
 
-        let urunler = document.querySelector(".urunlerRow");
+        urunler = document.querySelector(".urunlerRow");
         let gelenUrunler = value.map(val => {
 
             //!yıldızlar
@@ -53,51 +53,52 @@ fetch("public/product.json")
             }
         }
         ticketCheck();
+        sepeteEkle()
 
-
-        //!sepeteEkle
-        let sepeteEkle = document.querySelectorAll(".urunlerRow .sepeteEkle");
-        for (const i of sepeteEkle) {
-            i.addEventListener("click", function (evet) {
-                let element = evet.target;
-                let card = element.closest(".shopCard");
-                let cardParentNode = card.parentNode;
-
-                let img = cardParentNode.querySelector(".cardImg").src;
-                let title = cardParentNode.querySelector(".cardTitle").innerHTML;
-                let price = Number(cardParentNode.querySelector(".price").innerHTML);
-
-                // Aynı ürünün daha önce eklenip eklenmediğini kontrol et
-                const eskiUrun = sepet.find((urun) => urun.title === title);
-                if (eskiUrun) {
-                    // Ürün daha önce eklenmiş, işlem yapma
-                    return;
-                }
-
-                let eklenenSepet = {
-                    img: img,
-                    title: title,
-                    price: price,
-                };
-                sepet.push(eklenenSepet);
-                sepetGuncelle();
-            });
-        }
 
         //!kategori
         let Allcategory = value.map(value => {
             return value.category;
         });
 
-        const category = [...new Set(Allcategory)];
+        let category = [...new Set(Allcategory)];
         let categoryHTML = category.map(value => {
             return `
-                <li><button class="categoryBtn">${value}</button></li>
+               <button class="categoryBtn">${value}</button>
             `;
         });
-        let categoryUl = document.createElement("ul");
-        categoryUl.innerHTML = categoryHTML.join("");
-        document.querySelector(".categoryContent").appendChild(categoryUl);
+        
+        let allProductBtn = document.createElement("button") 
+        allProductBtn.innerHTML="Tüm Ürünler"
+        allProductBtn.className="allProducts"
+     
+        document.querySelector(".categoryContent").innerHTML=categoryHTML.join("")
+        document.querySelector(".categoryContent").prepend(allProductBtn);
+
+        allProductBtn.addEventListener("click",() => {
+            let allProductHtml = allProduct.map(value => {
+                return `
+                <div class="col-md-4">
+                    <div class="shopCard mt-5">
+                        <div class="cardImgParent">
+                            <img class="cardImg" src="${value.image}">
+                        </div>
+                        <a class="urunIncele" href="product-detail.html?id=${value.id}">
+                            <h5 class="cardTitle">${value.title}</h5>
+                            <h5 class="cardPrice">Fiyat : <span class="price">${value.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${value.price.oldprice.toFixed(2)}₺</span></h5>
+                        </a>
+                        <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
+                        <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${value.rating.toFixed(1)})</span></div>
+                        <div class="ticket">${value.ticket || ""}</div>
+                    </div>
+                </div>
+                `
+            })
+            urunler.innerHTML = allProductHtml.join("");
+            ticketCheck();
+            sepeteEkle()
+
+        })
 
         let categoryBtn = document.querySelectorAll(".categoryBtn");
         for (const i of categoryBtn) {
@@ -123,35 +124,7 @@ fetch("public/product.json")
                 });
                 urunler.innerHTML = x.join("");
                 ticketCheck();
-
-                //!sepeteEkle
-                let sepeteEkle = document.querySelectorAll(".urunlerRow .sepeteEkle");
-                for (const i of sepeteEkle) {
-                    i.addEventListener("click", function (evet) {
-                        let element = evet.target;
-                        let card = element.closest(".shopCard");
-                        let cardParentNode = card.parentNode;
-
-                        let img = cardParentNode.querySelector(".cardImg").src;
-                        let title = cardParentNode.querySelector(".cardTitle").innerHTML;
-                        let price = Number(cardParentNode.querySelector(".price").innerHTML);
-
-                        // Aynı ürünün daha önce eklenip eklenmediğini kontrol et
-                        const eskiUrun = sepet.find((urun) => urun.title === title);
-                        if (eskiUrun) {
-                            // Ürün daha önce eklenmiş, işlem yapma
-                            return;
-                        }
-
-                        let eklenenSepet = {
-                            img: img,
-                            title: title,
-                            price: price,
-                        };
-                        sepet.push(eklenenSepet);
-                        sepetGuncelle();
-                    });
-                }
+                sepeteEkle()
             });
         }
         urunDetay();
@@ -162,7 +135,6 @@ let toplamFiyatText = document.createElement("h2");
 
 
 const sepetGuncelle = () => {
-    // console.log(sepet);
     let sepetYazdir = sepet.map((value, index) => {
         return `
                 <div class="sepetCard">
@@ -202,7 +174,6 @@ const sepetGuncelle = () => {
 
 const urunDetay = () => {
     let urunIncele = document.querySelectorAll(".urunIncele");
-    // console.log(urunIncele);
     for (const i of urunIncele) {
         i.addEventListener("click", function () {
             const urunId = i.getAttribute('data-id');
@@ -210,3 +181,33 @@ const urunDetay = () => {
         });
     }
 };
+
+const sepeteEkle = () => {
+    let sepeteEkle = document.querySelectorAll(".urunlerRow .sepeteEkle");
+    for (const i of sepeteEkle) {
+        i.addEventListener("click", function (evet) {
+            let element = evet.target;
+            let card = element.closest(".shopCard");
+            let cardParentNode = card.parentNode;
+
+            let img = cardParentNode.querySelector(".cardImg").src;
+            let title = cardParentNode.querySelector(".cardTitle").innerHTML;
+            let price = Number(cardParentNode.querySelector(".price").innerHTML);
+
+            // Aynı ürünün daha önce eklenip eklenmediğini kontrol et
+            const eskiUrun = sepet.find((urun) => urun.title === title);
+            if (eskiUrun) {
+                // Ürün daha önce eklenmiş, işlem yapma
+                return;
+            }
+
+            let eklenenSepet = {
+                img: img,
+                title: title,
+                price: price,
+            };
+            sepet.push(eklenenSepet);
+            sepetGuncelle();
+        });
+    }
+}
