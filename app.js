@@ -67,34 +67,36 @@ fetch("public/product.json")
                <button class="categoryBtn">${value}</button>
             `;
         });
-        
-        let allProductBtn = document.createElement("button") 
-        allProductBtn.innerHTML="Tüm Ürünler"
-        allProductBtn.className="allProducts"
 
-     
-        document.querySelector(".categoryContent").innerHTML=categoryHTML.join("")
+        let allProductBtn = document.createElement("button")
+        allProductBtn.innerHTML = "Tüm Ürünler"
+        allProductBtn.className = "allProducts activeCategory"
+
+
+        document.querySelector(".categoryContent").innerHTML = categoryHTML.join("")
         document.querySelector(".categoryContent").prepend(allProductBtn);
 
         const buttons = document.querySelectorAll(".categoryBtn");
         const buttonClickHandler = (event) => {
-            // Tüm butonlardan sınıfı kaldırın
+            document.querySelector(".allProducts").classList.remove("activeCategory")
             buttons.forEach((button) => {
-              button.classList.remove("activeCategory");
+                button.classList.remove("activeCategory");
             });
-          
-            // Tıklanan butona sınıfı ekle
             event.target.classList.add("activeCategory");
-          };
-          
-          // Her bir butona tıklama olay dinleyicisi ekleyin
-          buttons.forEach((button) => {
+        };
+        buttons.forEach((button) => {
             button.addEventListener("click", buttonClickHandler);
         });
-          
-          
 
-        allProductBtn.addEventListener("click",() => {
+
+
+        allProductBtn.addEventListener("click", (e) => {
+            const buttons = document.querySelectorAll(".categoryBtn");
+            buttons.forEach((button) => {
+                button.classList.remove("activeCategory");
+            });
+            e.target.classList.add("activeCategory");
+
             let allProductHtml = allProduct.map(value => {
                 return `
                 <div class="col-md-4">
@@ -212,10 +214,8 @@ const sepeteEkle = () => {
             let title = cardParentNode.querySelector(".cardTitle").innerHTML;
             let price = Number(cardParentNode.querySelector(".price").innerHTML);
 
-            // Aynı ürünün daha önce eklenip eklenmediğini kontrol et
             const eskiUrun = sepet.find((urun) => urun.title === title);
             if (eskiUrun) {
-                // Ürün daha önce eklenmiş, işlem yapma
                 return;
             }
 
@@ -229,3 +229,4 @@ const sepeteEkle = () => {
         });
     }
 }
+
