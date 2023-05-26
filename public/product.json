@@ -30,6 +30,18 @@
         "description":"Çizi",
         "id":2,
         "image":"./public/img/cizi.jpg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/cizi.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":6,
@@ -44,6 +56,18 @@
         "description":"Dankek Lokmalık",
         "id":3,
         "image":"./public/img/dankek.jpg",
+        "detailImg":[
+            {
+                "detailImg":"/public/img/dankek.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":20,
@@ -58,6 +82,18 @@
         "description":"Haribo Goldbears",
         "id":4,
         "image":"./public/img/haribo.jpg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/haribo.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":35.45,
@@ -71,6 +107,18 @@
         "description":"Lays - Ruffles",
         "id":5,
         "image":"./public/img/lays-ruffels.jpg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/lays-ruffels.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":30.65,
@@ -84,6 +132,18 @@
         "description":"12'li Kuzeyden Su",
         "id":6,
         "image":"./public/img/12likuzeyden.jpg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/12likuzeyden.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":12,
@@ -97,6 +157,18 @@
         "description":"Çamlıca Gazoz",
         "id":7,
         "image":"./public/img/camlica.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/camlica.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":25,
@@ -110,6 +182,18 @@
         "description":"Cola - Fanta - Sprite",
         "id":8,
         "image":"./public/img/cola-fanta-sprite.jpg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/cola-fanta-sprite.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":45,
@@ -123,6 +207,18 @@
         "description":"Fusetea - Cappy",
         "id":9,
         "image":"./public/img/fusetea-cappy.jpg",
+        "detailImg":[
+            {
+                "detailImg":"/public/img/fusetea-cappy.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":35.65,
@@ -136,6 +232,18 @@
         "description":"Kuzeyden Su",
         "id":10,
         "image":"./public/img/kuzeyden.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/kuzeyden.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":2,
@@ -149,6 +257,18 @@
         "description":"Ananas",
         "id":11,
         "image":"./public/img/ananas.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/ananas.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":20,
@@ -162,6 +282,18 @@
         "description":"Domates",
         "id":12,
         "image":"./public/img/domates.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/domates.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":20,
@@ -175,6 +307,18 @@
         "description":"Elma",
         "id":13,
         "image":"./public/img/elma.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/elma.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":10,
@@ -188,6 +332,18 @@
         "description":"Muz",
         "id":14,
         "image":"./public/img/muz.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/muz.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":16,
@@ -201,6 +357,18 @@
         "description":"Clear - Rexona",
         "id":15,
         "image":"./public/img/clear.jpg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/clear.jpg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":65.45,
@@ -214,6 +382,18 @@
         "description":"Listerine",
         "id":16,
         "image":"./public/img/listerine.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/listerine.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":75.99,
@@ -227,6 +407,18 @@
         "description":"Signal",
         "id":17,
         "image":"./public/img/signal.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/signal.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
         {
             "newPrice":45.75,
