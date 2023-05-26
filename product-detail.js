@@ -47,8 +47,3 @@ fetch("public/product.json")
         });
     });
 });
-
-
-
-const zoomableImages = document.querySelectorAll('.zoomable-image');
-mediumZoom(zoomableImages);
