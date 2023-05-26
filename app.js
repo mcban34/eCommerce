@@ -154,6 +154,7 @@ fetch("public/product.json")
 let toplamFiyatText = document.createElement("h2");
 
 
+
 const sepetGuncelle = () => {
     let sepetYazdir = sepet.map((value, index) => {
         return `
@@ -164,12 +165,15 @@ const sepetGuncelle = () => {
                     <div class="sepetCardContent">
                         <h6 class="sepetTitle">${value.title}</h6>
                         <p class="sepetPrice">${value.price}₺</p>
+                        <br>
+                        <button class="sepetArttir">+<button>1<button>-<button>
                         <i data-index="${index}" class="bi bi-trash delete"></i>
                     </div>
                 </div>
             `;
     });
     document.querySelector(".sepet").innerHTML = sepetYazdir.join("");
+
 
     //!sepet toplamı
     let sepetToplam = 0;
@@ -216,7 +220,8 @@ const sepeteEkle = () => {
 
             const eskiUrun = sepet.find((urun) => urun.title === title);
             if (eskiUrun) {
-                return;
+                console.log(eskiUrun);
+                return
             }
 
             let eklenenSepet = {
