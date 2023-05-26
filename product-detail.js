@@ -33,17 +33,19 @@ fetch("public/product.json")
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-      
-        $('.slider-nav').slick({
+            fade: true
+         });
+         $('.slider-nav').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.slider-for',
             dots: false,
             centerMode: false,
-            focusOnSelect: true
-        });
+            focusOnSelect: false
+         });
+         
+         $('.slider-nav .slick-slide').on('click', function (event) {
+            $('.slider-for').slick('slickGoTo', $(this).data('slickIndex'));
+         });
     });
 });
