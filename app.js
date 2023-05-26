@@ -1,10 +1,16 @@
 let sepet = [];
 let urunId = 0;
 
+var loadingDiv = document.createElement('div');
+loadingDiv.textContent = 'Ürünler yükleniyor...';
+document.body.appendChild(loadingDiv);
+
+
+
 fetch("public/product.json")
     .then(res => res.json())
-    .then(value => {
-
+    .then(function(value) {
+        loadingDiv.remove();
         let allProduct = value;
 
         urunler = document.querySelector(".urunlerRow");
@@ -38,116 +44,119 @@ fetch("public/product.json")
                 </div>
             `;
         });
-        urunler.innerHTML = gelenUrunler.join("");
+        // console.log(gelenUrunler.length);
+        if(gelenUrunler.length>0){
+            urunler.innerHTML = gelenUrunler.join("");
 
-        //!etiket kontrol
-        const ticketCheck = () => {
-            let ticket = document.querySelectorAll(".ticket");
-            for (const i of ticket) {
-                if (i.innerHTML == "") {
-                    i.style.display = "none";
-                }
-                if (i.innerHTML == "Yeni Ürün") {
-                    i.style.background = "#0fb942";
+            //!etiket kontrol
+            const ticketCheck = () => {
+                let ticket = document.querySelectorAll(".ticket");
+                for (const i of ticket) {
+                    if (i.innerHTML == "") {
+                        i.style.display = "none";
+                    }
+                    if (i.innerHTML == "Yeni Ürün") {
+                        i.style.background = "#0fb942";
+                    }
                 }
             }
-        }
-        ticketCheck();
-        sepeteEkle()
-
-
-        //!kategori
-        let Allcategory = value.map(value => {
-            return value.category;
-        });
-
-        let category = [...new Set(Allcategory)];
-        let categoryHTML = category.map(value => {
-            return `
-               <button class="categoryBtn">${value}</button>
-            `;
-        });
-
-        let allProductBtn = document.createElement("button")
-        allProductBtn.innerHTML = "Tüm Ürünler"
-        allProductBtn.className = "allProducts activeCategory"
-
-
-        document.querySelector(".categoryContent").innerHTML = categoryHTML.join("")
-        document.querySelector(".categoryContent").prepend(allProductBtn);
-
-        const buttons = document.querySelectorAll(".categoryBtn");
-        const buttonClickHandler = (event) => {
-            document.querySelector(".allProducts").classList.remove("activeCategory")
-            buttons.forEach((button) => {
-                button.classList.remove("activeCategory");
-            });
-            event.target.classList.add("activeCategory");
-        };
-        buttons.forEach((button) => {
-            button.addEventListener("click", buttonClickHandler);
-        });
-
-
-
-        allProductBtn.addEventListener("click", (e) => {
-            const buttons = document.querySelectorAll(".categoryBtn");
-            buttons.forEach((button) => {
-                button.classList.remove("activeCategory");
-            });
-            e.target.classList.add("activeCategory");
-
-            let allProductHtml = allProduct.map(value => {
-                return `
-                <div class="col-md-4">
-                    <div class="shopCard mt-5">
-                        <div class="cardImgParent">
-                            <img class="cardImg" src="${value.image}">
-                        </div>
-                        <a class="urunIncele" href="product-detail.html?id=${value.id}">
-                            <h5 class="cardTitle">${value.title}</h5>
-                            <h5 class="cardPrice">Fiyat : <span class="price">${value.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${value.price.oldprice.toFixed(2)}₺</span></h5>
-                        </a>
-                        <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
-                        <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${value.rating.toFixed(1)})</span></div>
-                        <div class="ticket">${value.ticket || ""}</div>
-                    </div>
-                </div>
-                `
-            })
-            urunler.innerHTML = allProductHtml.join("");
             ticketCheck();
             sepeteEkle()
-        })
-
-        let categoryBtn = document.querySelectorAll(".categoryBtn");
-        for (const i of categoryBtn) {
-            i.addEventListener("click", function () {
-                let filterProduct = allProduct.filter(value => value.category == i.innerHTML);
-                let x = filterProduct.map(value => {
-                    return `
-                        <div class="col-md-4">
-                            <div class="shopCard mt-5">
-                                <div class="cardImgParent">
-                                    <img class="cardImg" src="${value.image}">
-                                </div>
-                                <a class="urunIncele" href="product-detail.html?id=${value.id}">
-                                    <h5 class="cardTitle">${value.title}</h5>
-                                    <h5 class="cardPrice">Fiyat : <span class="price">${value.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${value.price.oldprice.toFixed(2)}₺</span></h5>
-                                </a>
-                                <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
-                                <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${value.rating.toFixed(1)})</span></div>
-                                <div class="ticket">${value.ticket || ""}</div>
-                            </div>
-                        </div>
-                    `;
+    
+    
+            //!kategori
+            let Allcategory = value.map(value => {
+                return value.category;
+            });
+    
+            let category = [...new Set(Allcategory)];
+            let categoryHTML = category.map(value => {
+                return `
+                   <button class="categoryBtn">${value}</button>
+                `;
+            });
+    
+            let allProductBtn = document.createElement("button")
+            allProductBtn.innerHTML = "Tüm Ürünler"
+            allProductBtn.className = "allProducts activeCategory"
+    
+    
+            document.querySelector(".categoryContent").innerHTML = categoryHTML.join("")
+            document.querySelector(".categoryContent").prepend(allProductBtn);
+    
+            const buttons = document.querySelectorAll(".categoryBtn");
+            const buttonClickHandler = (event) => {
+                document.querySelector(".allProducts").classList.remove("activeCategory")
+                buttons.forEach((button) => {
+                    button.classList.remove("activeCategory");
                 });
-                urunler.innerHTML = x.join("");
+                event.target.classList.add("activeCategory");
+            };
+            buttons.forEach((button) => {
+                button.addEventListener("click", buttonClickHandler);
+            });
+    
+    
+    
+            allProductBtn.addEventListener("click", (e) => {
+                const buttons = document.querySelectorAll(".categoryBtn");
+                buttons.forEach((button) => {
+                    button.classList.remove("activeCategory");
+                });
+                e.target.classList.add("activeCategory");
+    
+                let allProductHtml = allProduct.map(value => {
+                    return `
+                    <div class="col-md-4">
+                        <div class="shopCard mt-5">
+                            <div class="cardImgParent">
+                                <img class="cardImg" src="${value.image}">
+                            </div>
+                            <a class="urunIncele" href="product-detail.html?id=${value.id}">
+                                <h5 class="cardTitle">${value.title}</h5>
+                                <h5 class="cardPrice">Fiyat : <span class="price">${value.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${value.price.oldprice.toFixed(2)}₺</span></h5>
+                            </a>
+                            <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
+                            <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${value.rating.toFixed(1)})</span></div>
+                            <div class="ticket">${value.ticket || ""}</div>
+                        </div>
+                    </div>
+                    `
+                })
+                urunler.innerHTML = allProductHtml.join("");
                 ticketCheck();
                 sepeteEkle()
-            });
+            })
+    
+            let categoryBtn = document.querySelectorAll(".categoryBtn");
+            for (const i of categoryBtn) {
+                i.addEventListener("click", function () {
+                    let filterProduct = allProduct.filter(value => value.category == i.innerHTML);
+                    let x = filterProduct.map(value => {
+                        return `
+                            <div class="col-md-4">
+                                <div class="shopCard mt-5">
+                                    <div class="cardImgParent">
+                                        <img class="cardImg" src="${value.image}">
+                                    </div>
+                                    <a class="urunIncele" href="product-detail.html?id=${value.id}">
+                                        <h5 class="cardTitle">${value.title}</h5>
+                                        <h5 class="cardPrice">Fiyat : <span class="price">${value.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${value.price.oldprice.toFixed(2)}₺</span></h5>
+                                    </a>
+                                    <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
+                                    <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${value.rating.toFixed(1)})</span></div>
+                                    <div class="ticket">${value.ticket || ""}</div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    urunler.innerHTML = x.join("");
+                    ticketCheck();
+                    sepeteEkle()
+                });
+            }
+            urunDetay();
         }
-        urunDetay();
     });
 
 
