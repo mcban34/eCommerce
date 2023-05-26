@@ -4,6 +4,18 @@
         "description":"browni",
         "id":1,
         "image":"./public/img/browni.jpeg",
+        "detailImg":[
+            {
+                "detailImg":"./public/img/browni.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni2.jpeg"
+            },
+            {
+                "detailImg":"./public/img/browni3.jpeg"
+            }
+
+        ],
         "price":
             {
                 "newPrice":4.8,
