@@ -1,16 +1,19 @@
 let sepet = [];
 let urunId = 0;
 
-var loadingDiv = document.createElement('div');
-loadingDiv.textContent = 'Ürünler yükleniyor...';
-document.body.appendChild(loadingDiv);
+let loadingDivParent = document.createElement("div");
+loadingDivParent.className = "loadingDivParent";
 
+let loadingDiv = document.createElement("img");
+loadingDiv.src = 'public/img/loading.gif';
+loadingDivParent.appendChild(loadingDiv);
 
+document.body.appendChild(loadingDivParent);
 
 fetch("public/product.json")
     .then(res => res.json())
-    .then(function(value) {
-        loadingDiv.remove();
+    .then(function (value) {
+        loadingDivParent.style.display = "flex";
         let allProduct = value;
 
         urunler = document.querySelector(".urunlerRow");
@@ -44,69 +47,73 @@ fetch("public/product.json")
                 </div>
             `;
         });
-        // console.log(gelenUrunler.length);
-        if(gelenUrunler.length>0){
-            urunler.innerHTML = gelenUrunler.join("");
 
-            //!etiket kontrol
-            const ticketCheck = () => {
-                let ticket = document.querySelectorAll(".ticket");
-                for (const i of ticket) {
-                    if (i.innerHTML == "") {
-                        i.style.display = "none";
-                    }
-                    if (i.innerHTML == "Yeni Ürün") {
-                        i.style.background = "#0fb942";
-                    }
+        urunler.innerHTML = gelenUrunler.join("")
+
+        let cardImg = document.querySelectorAll(".cardImg")
+        for (const i of cardImg) {
+            cardImg[cardImg.length - 1].addEventListener("load",function(){
+                loadingDivParent.style.display = "none";
+            })
+        }
+
+        //!etiket kontrol
+        const ticketCheck = () => {
+            let ticket = document.querySelectorAll(".ticket");
+            for (const i of ticket) {
+                if (i.innerHTML == "") {
+                    i.style.display = "none";
+                }
+                if (i.innerHTML == "Yeni Ürün") {
+                    i.style.background = "#0fb942";
                 }
             }
-            ticketCheck();
-            sepeteEkle()
-    
-    
-            //!kategori
-            let Allcategory = value.map(value => {
-                return value.category;
-            });
-    
-            let category = [...new Set(Allcategory)];
-            let categoryHTML = category.map(value => {
-                return `
+        }
+        ticketCheck();
+        sepeteEkle()
+
+
+        //!kategori
+        let Allcategory = value.map(value => {
+            return value.category;
+        });
+
+        let category = [...new Set(Allcategory)];
+        let categoryHTML = category.map(value => {
+            return `
                    <button class="categoryBtn">${value}</button>
                 `;
-            });
-    
-            let allProductBtn = document.createElement("button")
-            allProductBtn.innerHTML = "Tüm Ürünler"
-            allProductBtn.className = "allProducts activeCategory"
-    
-    
-            document.querySelector(".categoryContent").innerHTML = categoryHTML.join("")
-            document.querySelector(".categoryContent").prepend(allProductBtn);
-    
-            const buttons = document.querySelectorAll(".categoryBtn");
-            const buttonClickHandler = (event) => {
-                document.querySelector(".allProducts").classList.remove("activeCategory")
-                buttons.forEach((button) => {
-                    button.classList.remove("activeCategory");
-                });
-                event.target.classList.add("activeCategory");
-            };
+        });
+
+        let allProductBtn = document.createElement("button")
+        allProductBtn.innerHTML = "Tüm Ürünler"
+        allProductBtn.className = "allProducts activeCategory"
+
+
+        document.querySelector(".categoryContent").innerHTML = categoryHTML.join("")
+        document.querySelector(".categoryContent").prepend(allProductBtn);
+
+        const buttons = document.querySelectorAll(".categoryBtn");
+        const buttonClickHandler = (event) => {
+            document.querySelector(".allProducts").classList.remove("activeCategory")
             buttons.forEach((button) => {
-                button.addEventListener("click", buttonClickHandler);
+                button.classList.remove("activeCategory");
             });
-    
-    
-    
-            allProductBtn.addEventListener("click", (e) => {
-                const buttons = document.querySelectorAll(".categoryBtn");
-                buttons.forEach((button) => {
-                    button.classList.remove("activeCategory");
-                });
-                e.target.classList.add("activeCategory");
-    
-                let allProductHtml = allProduct.map(value => {
-                    return `
+            event.target.classList.add("activeCategory");
+        };
+        buttons.forEach((button) => {
+            button.addEventListener("click", buttonClickHandler);
+        });
+
+        allProductBtn.addEventListener("click", (e) => {
+            const buttons = document.querySelectorAll(".categoryBtn");
+            buttons.forEach((button) => {
+                button.classList.remove("activeCategory");
+            });
+            e.target.classList.add("activeCategory");
+
+            let allProductHtml = allProduct.map(value => {
+                return `
                     <div class="col-md-4">
                         <div class="shopCard mt-5">
                             <div class="cardImgParent">
@@ -122,18 +129,18 @@ fetch("public/product.json")
                         </div>
                     </div>
                     `
-                })
-                urunler.innerHTML = allProductHtml.join("");
-                ticketCheck();
-                sepeteEkle()
             })
-    
-            let categoryBtn = document.querySelectorAll(".categoryBtn");
-            for (const i of categoryBtn) {
-                i.addEventListener("click", function () {
-                    let filterProduct = allProduct.filter(value => value.category == i.innerHTML);
-                    let x = filterProduct.map(value => {
-                        return `
+            urunler.innerHTML = allProductHtml.join("");
+            ticketCheck();
+            sepeteEkle()
+        })
+
+        let categoryBtn = document.querySelectorAll(".categoryBtn");
+        for (const i of categoryBtn) {
+            i.addEventListener("click", function () {
+                let filterProduct = allProduct.filter(value => value.category == i.innerHTML);
+                let x = filterProduct.map(value => {
+                    return `
                             <div class="col-md-4">
                                 <div class="shopCard mt-5">
                                     <div class="cardImgParent">
@@ -149,20 +156,17 @@ fetch("public/product.json")
                                 </div>
                             </div>
                         `;
-                    });
-                    urunler.innerHTML = x.join("");
-                    ticketCheck();
-                    sepeteEkle()
                 });
-            }
-            urunDetay();
+                urunler.innerHTML = x.join("");
+                ticketCheck();
+                sepeteEkle()
+            });
         }
+        urunDetay();
     });
 
 
 let toplamFiyatText = document.createElement("h2");
-
-
 
 const sepetGuncelle = () => {
     let sepetYazdir = sepet.map((value, index) => {
@@ -182,7 +186,6 @@ const sepetGuncelle = () => {
             `;
     });
     document.querySelector(".sepet").innerHTML = sepetYazdir.join("");
-
 
     //!sepet toplamı
     let sepetToplam = 0;
