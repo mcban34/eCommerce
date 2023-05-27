@@ -3,16 +3,16 @@
         "category":"Atıştırmalık",
         "description":"browni",
         "id":1,
-        "image":"./public/img/browni.jpeg",
+        "image":"./public/img/browni.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/browni.jpeg"
+                "detailImg":"./public/img/browni.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -29,16 +29,16 @@
         "category":"Atıştırmalık",
         "description":"Çizi",
         "id":2,
-        "image":"./public/img/cizi.jpg",
+        "image":"./public/img/cizi.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/cizi.jpg"
+                "detailImg":"./public/img/cizi.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -55,16 +55,16 @@
         "category":"Atıştırmalık",
         "description":"Dankek Lokmalık",
         "id":3,
-        "image":"./public/img/dankek.jpg",
+        "image":"./public/img/dankek.webp",
         "detailImg":[
             {
-                "detailImg":"/public/img/dankek.jpg"
+                "detailImg":"/public/img/dankek.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -81,16 +81,16 @@
         "category":"Atıştırmalık",
         "description":"Haribo Goldbears",
         "id":4,
-        "image":"./public/img/haribo.jpg",
+        "image":"./public/img/haribo.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/haribo.jpg"
+                "detailImg":"./public/img/haribo.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -106,16 +106,16 @@
         "category":"Atıştırmalık",
         "description":"Lays - Ruffles",
         "id":5,
-        "image":"./public/img/lays-ruffels.jpg",
+        "image":"./public/img/lays-ruffels.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/lays-ruffels.jpg"
+                "detailImg":"./public/img/lays-ruffels.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -131,16 +131,16 @@
         "category":"İçecek",
         "description":"12'li Kuzeyden Su",
         "id":6,
-        "image":"./public/img/12likuzeyden.jpg",
+        "image":"./public/img/12likuzeyden.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/12likuzeyden.jpg"
+                "detailImg":"./public/img/12likuzeyden.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -156,16 +156,16 @@
         "category":"İçecek",
         "description":"Çamlıca Gazoz",
         "id":7,
-        "image":"./public/img/camlica.jpeg",
+        "image":"./public/img/camlica.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/camlica.jpeg"
+                "detailImg":"./public/img/camlica.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -181,16 +181,16 @@
         "category":"İçecek",
         "description":"Cola - Fanta - Sprite",
         "id":8,
-        "image":"./public/img/cola-fanta-sprite.jpg",
+        "image":"./public/img/cola-fanta-sprite.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/cola-fanta-sprite.jpg"
+                "detailImg":"./public/img/cola-fanta-sprite.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -206,16 +206,16 @@
         "category":"İçecek",
         "description":"Fusetea - Cappy",
         "id":9,
-        "image":"./public/img/fusetea-cappy.jpg",
+        "image":"./public/img/fusetea-cappy.webp",
         "detailImg":[
             {
-                "detailImg":"/public/img/fusetea-cappy.jpg"
+                "detailImg":"/public/img/fusetea-cappy.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -231,16 +231,16 @@
         "category":"İçecek",
         "description":"Kuzeyden Su",
         "id":10,
-        "image":"./public/img/kuzeyden.jpeg",
+        "image":"./public/img/kuzeyden.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/kuzeyden.jpeg"
+                "detailImg":"./public/img/kuzeyden.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -256,16 +256,16 @@
         "category":"Meyve-Sebze",
         "description":"Ananas",
         "id":11,
-        "image":"./public/img/ananas.jpeg",
+        "image":"./public/img/ananas.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/ananas.jpeg"
+                "detailImg":"./public/img/ananas.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -281,16 +281,16 @@
         "category":"Meyve-Sebze",
         "description":"Domates",
         "id":12,
-        "image":"./public/img/domates.jpeg",
+        "image":"./public/img/domates.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/domates.jpeg"
+                "detailImg":"./public/img/domates.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -306,16 +306,16 @@
         "category":"Meyve-Sebze",
         "description":"Elma",
         "id":13,
-        "image":"./public/img/elma.jpeg",
+        "image":"./public/img/elma.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/elma.jpeg"
+                "detailImg":"./public/img/elma.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -331,16 +331,16 @@
         "category":"Meyve-Sebze",
         "description":"Muz",
         "id":14,
-        "image":"./public/img/muz.jpeg",
+        "image":"./public/img/muz.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/muz.jpeg"
+                "detailImg":"./public/img/muz.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -356,16 +356,16 @@
         "category":"Kişisel-Bakım",
         "description":"Clear - Rexona",
         "id":15,
-        "image":"./public/img/clear.jpg",
+        "image":"./public/img/clear.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/clear.jpg"
+                "detailImg":"./public/img/clear.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -381,16 +381,16 @@
         "category":"Kişisel-Bakım",
         "description":"Listerine",
         "id":16,
-        "image":"./public/img/listerine.jpeg",
+        "image":"./public/img/listerine.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/listerine.jpeg"
+                "detailImg":"./public/img/listerine.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
@@ -406,16 +406,16 @@
         "category":"Kişisel-Bakım",
         "description":"Signal",
         "id":17,
-        "image":"./public/img/signal.jpeg",
+        "image":"./public/img/signal.webp",
         "detailImg":[
             {
-                "detailImg":"./public/img/signal.jpeg"
+                "detailImg":"./public/img/signal.webp"
             },
             {
-                "detailImg":"./public/img/browni2.jpeg"
+                "detailImg":"./public/img/browni2.webp"
             },
             {
-                "detailImg":"./public/img/browni3.jpeg"
+                "detailImg":"./public/img/browni3.webp"
             }
 
         ],
