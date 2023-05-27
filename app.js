@@ -166,9 +166,14 @@ fetch("public/product.json")
     });
 
 
-let toplamFiyatText = document.createElement("h2");
+let toplamFiyatText = document.createElement("h4");
+toplamFiyatText.className="toplamFiyatText"
+toplamFiyatText.style.marginTop="1rem"
+toplamFiyatText.style.color="#FC6E1E"
 
 const sepetGuncelle = () => {
+    document.querySelector(".sepet").style.height="300px"
+
     let sepetYazdir = sepet.map((value, index) => {
         return `
                 <div class="sepetCard">
@@ -178,8 +183,6 @@ const sepetGuncelle = () => {
                     <div class="sepetCardContent">
                         <h6 class="sepetTitle">${value.title}</h6>
                         <p class="sepetPrice">${value.price}₺</p>
-                        <br>
-                        <button class="sepetArttir">+<button>1<button>-<button>
                         <i data-index="${index}" class="bi bi-trash delete"></i>
                     </div>
                 </div>
@@ -193,7 +196,8 @@ const sepetGuncelle = () => {
         sepetToplam += i.price;
     }
     toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
-    document.querySelector(".sepet").appendChild(toplamFiyatText);
+    document.querySelector(".sepetParent").appendChild(toplamFiyatText);
+    document.querySelector(".toplamFiyatText").style.marginTop="1rem"
 
 
     //!sepet delete
@@ -205,6 +209,11 @@ const sepetGuncelle = () => {
             sepet.splice(index, 1);
             sepetGuncelle();
         });
+    }
+    if(sepetToplam==0.00){
+        toplamFiyatText.innerHTML="Sepetinizde Ürün Bulunmuyor!"
+        document.querySelector(".sepet").style.height="0px"
+        document.querySelector(".toplamFiyatText").style.marginTop="0px"
     }
 };
 
