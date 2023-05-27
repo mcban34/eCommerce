@@ -31,10 +31,10 @@ fetch("public/product.json")
 
             urunId++;
             return `
-                <div class="col-md-4">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="shopCard mt-5">
                         <div class="cardImgParent">
-                            <img class="cardImg" src="${val.image}">
+                            <img class="cardImg" width="100%" height="100%" alt="${val.title}" src="${val.image}">
                         </div>
                         <a class="urunIncele" data-id="${urunId}">
                             <h5 class="cardTitle">${val.title}</h5>
