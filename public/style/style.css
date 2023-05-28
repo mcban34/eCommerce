@@ -130,6 +130,13 @@ img {
   }
 }
 
+.category .categoryContent {
+  display: flex;
+  justify-content: space-between;
+}
+.category .categoryContent button {
+  width: 19%;
+}
 .category .categoryContent .categoryBtn, .category .categoryContent .allProducts {
   color: #3a3a3a;
   border: none;
@@ -145,6 +152,18 @@ img {
 .category .categoryContent .activeCategory {
   background: #FC6E1E;
   color: white;
+}
+@media screen and (max-width: 600px) {
+  .category .categoryContent {
+    display: block;
+  }
+  .category .categoryContent .categoryBtn {
+    margin-left: 0 !important;
+  }
+  .category .categoryContent .categoryBtn, .category .categoryContent .allProducts {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
 
 .slick-track {

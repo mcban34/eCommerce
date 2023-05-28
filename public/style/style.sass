@@ -117,6 +117,10 @@ img
 
 .category
     .categoryContent
+        display: flex
+        justify-content: space-between
+        button
+            width: 19%
         .categoryBtn,.allProducts
             color: $black
             border: none
@@ -130,6 +134,14 @@ img
         .activeCategory
             background: $orange
             color: white
+    @media screen and (max-width : 600px)
+        .categoryContent
+            display: block
+            .categoryBtn
+                margin-left: 0 !important
+            .categoryBtn,.allProducts 
+                width: 100%
+                margin-top: .5rem
 
 .slick-track
     width: none !important
