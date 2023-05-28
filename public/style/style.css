@@ -121,7 +121,7 @@ img {
   color: white;
   background: #fa3a3a;
 }
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .shopCard .urunIncele .cardPrice {
     font-size: 1rem;
   }
