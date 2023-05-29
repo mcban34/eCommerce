@@ -25,6 +25,16 @@ img {
   overflow: auto;
   padding: 0.5rem;
 }
+.sepetContent .sepet::-webkit-scrollbar {
+  width: 10px;
+}
+.sepetContent .sepet::-webkit-scrollbar-track {
+  background-color: rgba(252, 110, 30, 0.1);
+}
+.sepetContent .sepet::-webkit-scrollbar-thumb {
+  background-color: #FC6E1E;
+  border-radius: 20px;
+}
 .sepetContent .sepet .sepetCard {
   width: 100%;
   display: flex;
@@ -33,6 +43,9 @@ img {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   margin-top: 1rem;
   padding: 0rem 0.5rem;
+}
+.sepetContent .sepet .sepetCard:first-child {
+  margin-top: 0 !important;
 }
 .sepetContent .sepet .sepetCard .sepetCardContent {
   text-align: end;

@@ -28,6 +28,13 @@ img
         height: 300px
         overflow: auto
         padding: .5rem
+        &::-webkit-scrollbar 
+            width: 10px
+        &::-webkit-scrollbar-track
+            background-color: transparentize($orange,.9)
+        &::-webkit-scrollbar-thumb
+            background-color: $orange
+            border-radius: 20px
         .sepetCard
             width: 100%
             display: flex
@@ -36,6 +43,8 @@ img
             box-shadow: $boxShadow
             margin-top: 1rem
             padding: 0rem .5rem
+            &:first-child
+                margin-top: 0 !important
             .sepetCardContent
                 text-align: end
                 .sepetPrice,.delete
@@ -48,6 +57,8 @@ img
                     color: $gray
                 .sepetPrice
                     color: $orange
+        
+
 .shopCard
     position: relative
     border: 1px solid rgba(0,0,0,.1)
