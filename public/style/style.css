@@ -112,10 +112,7 @@ img {
   color: #9B958E;
   text-decoration: line-through;
 }
-.shopCard .rating-stars .bi-star-fill {
-  color: #FFD27D;
-}
-.shopCard .rating-stars .bi-star {
+.shopCard .rating-stars .bi-star-fill, .shopCard .rating-stars .bi-star {
   color: #FFD27D;
 }
 .shopCard .rating-stars .ratingHtml {
@@ -187,4 +184,30 @@ img {
   .sepetCol {
     display: none;
   }
+}
+
+.productDetailContent .detailContent .rating-stars {
+  margin-bottom: 1rem;
+}
+.productDetailContent .detailContent .rating-stars .bi-star-fill, .productDetailContent .detailContent .rating-stars .bi-star {
+  color: #FFD27D;
+}
+.productDetailContent .detailContent .oldPrice {
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+.productDetailContent .detailContent .ticked {
+  background: #fa3a3a;
+  color: white;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+}
+.productDetailContent .detailContent .addToCard {
+  background: #FC6E1E;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.3rem;
+}
+.productDetailContent .detailContent .addToCard i {
+  padding-left: 0.3rem;
 }/*# sourceMappingURL=style.css.map */

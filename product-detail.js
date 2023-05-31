@@ -42,9 +42,9 @@ fetch("public/product.json")
             <div class="detailContent">
                 <h1 class="detailTitle">${element.title}</h1>
                 <p class="detailDes">${element.description}</p>
+                <h2>${element.price.newPrice.toFixed(2)}₺ <span class="oldPrice">${element.price.oldprice.toFixed(2)}₺</span> </h2>
                 <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${element.rating.toFixed(1)})</span>  <span class="ticked">${element.ticket}</span></div>
-                <h2>${element.price.newPrice}₺ <span class="oldPrice">${element.price.oldprice}₺</span> </h2>
-                <button class="addToCard">Sepete Ekle</button>
+                <button class="addToCard">Sepete Ekle <i class="bi bi-basket"></i></button>
             </div>
 
         `

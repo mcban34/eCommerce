@@ -101,9 +101,7 @@ img
             text-decoration: line-through
                 
     .rating-stars
-        .bi-star-fill
-            color: #FFD27D
-        .bi-star
+        .bi-star-fill , .bi-star
             color: #FFD27D
         .ratingHtml
             color:  $gray
@@ -160,3 +158,25 @@ img
 .sepetCol
     @media screen and (max-width : 991px)
         display: none
+
+.productDetailContent
+    .detailContent
+        .rating-stars
+            margin-bottom: 1rem
+            .bi-star-fill , .bi-star
+                color: #FFD27D
+        .oldPrice
+            font-size:1rem
+            text-decoration: line-through
+        .ticked
+            background: $red
+            color: white
+            padding: .3rem .5rem
+            font-size: .8rem
+        .addToCard
+            background: $orange
+            border: none    
+            color: white
+            padding: .6rem 1.3rem
+            i
+                padding-left: .3rem
