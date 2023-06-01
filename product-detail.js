@@ -39,7 +39,7 @@ fetch("public/product.json")
             ratingHtml = ratingStars.join('');
         return `
 
-            <div class="detailContent">
+            <div class="detailContent my-4">
                 <h1 class="detailTitle">${element.title}</h1>
                 <p class="detailDes">${element.description}</p>
                 <h2>${element.price.newPrice.toFixed(2)}₺ <span class="oldPrice">${element.price.oldprice.toFixed(2)}₺</span> </h2>

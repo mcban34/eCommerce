@@ -195,6 +195,7 @@ img {
 .productDetailContent .detailContent .oldPrice {
   font-size: 1rem;
   text-decoration: line-through;
+  color: #9B958E;
 }
 .productDetailContent .detailContent .ticked {
   background: #fa3a3a;
@@ -210,4 +211,9 @@ img {
 }
 .productDetailContent .detailContent .addToCard i {
   padding-left: 0.3rem;
+}
+@media screen and (max-width: 768px) {
+  .productDetailContent .detailContent .addToCard {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
