@@ -50,7 +50,9 @@ fetch("public/product.json")
         `
     })
     document.querySelector(".productDetailContent").innerHTML=detailContentHTML.join("")
-
+    if(document.querySelector(".ticked").innerHTML=="undefined"){
+        document.querySelector(".ticked").style.display="none"
+    }
 
     $(document).ready(function(){
         $('.slider-for').slick({
