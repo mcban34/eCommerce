@@ -38,7 +38,9 @@ fetch("public/product.json")
                         </div>
                         <a class="urunIncele" data-id="${urunId}">
                             <h5 class="cardTitle">${val.title}</h5>
-                            <h5 class="cardPrice">Fiyat : <span class="price">${val.price.newPrice.toFixed(2)}</span>₺ <span class="oldPrice">${val.price.oldprice.toFixed(2)}₺</span></h5>
+                            <h5 class="cardPrice">Fiyat : <span class="price">${val.price.newPrice.toFixed(2)}</span>₺ 
+                            <span class="oldPrice">${val.price.oldprice.toFixed(2)}₺</span>
+                            </h5>
                         </a>
                         <button class="sepeteEkle"><i class="bi bi-plus"></i></button>
                         <div class="rating-stars">${ratingHtml} <span class="ratingHtml">(${val.rating.toFixed(1)})</span></div>
@@ -52,7 +54,7 @@ fetch("public/product.json")
 
         let cardImg = document.querySelectorAll(".cardImg")
         for (const i of cardImg) {
-            cardImg[cardImg.length - 1].addEventListener("load",function(){
+            cardImg[cardImg.length - 1].addEventListener("load", function () {
                 loadingDivParent.style.display = "none";
             })
         }
@@ -113,6 +115,14 @@ fetch("public/product.json")
             e.target.classList.add("activeCategory");
 
             let allProductHtml = allProduct.map(value => {
+                let ratingStars = [];
+                for (let j = 0; j < parseInt(value.rating); j++) {
+                    ratingStars.push('<i class="bi bi-star-fill"></i>');
+                }
+                for (let j = 0; j < 5 - parseInt(value.rating); j++) {
+                    ratingStars.push('<i class="bi bi-star"></i>');
+                }
+                ratingHtml = ratingStars.join('');
                 return `
                     <div class="col-md-4">
                         <div class="shopCard mt-5">
@@ -140,6 +150,15 @@ fetch("public/product.json")
             i.addEventListener("click", function () {
                 let filterProduct = allProduct.filter(value => value.category == i.innerHTML);
                 let x = filterProduct.map(value => {
+                    let ratingStars = [];
+                    for (let j = 0; j < parseInt(value.rating); j++) {
+                        ratingStars.push('<i class="bi bi-star-fill"></i>');
+                    }
+                    for (let j = 0; j < 5 - parseInt(value.rating); j++) {
+                        ratingStars.push('<i class="bi bi-star"></i>');
+                    }
+                    ratingHtml = ratingStars.join('');
+
                     return `
                             <div class="col-md-4">
                                 <div class="shopCard mt-5">
@@ -167,12 +186,12 @@ fetch("public/product.json")
 
 
 let toplamFiyatText = document.createElement("h4");
-toplamFiyatText.className="toplamFiyatText"
-toplamFiyatText.style.marginTop="1rem"
-toplamFiyatText.style.color="#FC6E1E"
+toplamFiyatText.className = "toplamFiyatText"
+toplamFiyatText.style.marginTop = "1rem"
+toplamFiyatText.style.color = "#FC6E1E"
 
 const sepetGuncelle = () => {
-    document.querySelector(".sepet").style.height="300px"
+    document.querySelector(".sepet").style.height = "300px"
 
     let sepetYazdir = sepet.map((value, index) => {
         return `
@@ -197,7 +216,7 @@ const sepetGuncelle = () => {
     }
     toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
     document.querySelector(".sepetParent").appendChild(toplamFiyatText);
-    document.querySelector(".toplamFiyatText").style.marginTop="1rem"
+    document.querySelector(".toplamFiyatText").style.marginTop = "1rem"
 
 
     //!sepet delete
@@ -210,10 +229,10 @@ const sepetGuncelle = () => {
             sepetGuncelle();
         });
     }
-    if(sepetToplam==0.00){
-        toplamFiyatText.innerHTML="Sepetinizde Ürün Bulunmuyor!"
-        document.querySelector(".sepet").style.height="0px"
-        document.querySelector(".toplamFiyatText").style.marginTop="0px"
+    if (sepetToplam == 0.00) {
+        toplamFiyatText.innerHTML = "Sepetinizde Ürün Bulunmuyor!"
+        document.querySelector(".sepet").style.height = "0px"
+        document.querySelector(".toplamFiyatText").style.marginTop = "0px"
     }
 };
 
