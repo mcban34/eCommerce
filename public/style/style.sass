@@ -174,12 +174,19 @@ img
             color: white
             padding: .3rem .5rem
             font-size: .8rem
-        .addToCard
-            background: $orange
-            border: none    
-            color: white
-            padding: .6rem 1.3rem
-            i
-                padding-left: .3rem
-            @media screen and (max-width : 768px)
-                width: 100%
+        .detailContentBottom    
+            display: flex   
+            .addToCard
+                background: $orange
+                border: none    
+                color: white
+                padding: .6rem 1.3rem
+                i
+                    padding-left: .3rem
+                @media screen and (max-width : 768px)
+                    width: 100%
+            .bi-heart,.bi-heart-fill
+                font-size: 1.8rem
+                margin-left: 1rem
+                color: $orange
+                cursor: pointer

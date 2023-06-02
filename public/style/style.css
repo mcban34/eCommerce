@@ -203,17 +203,26 @@ img {
   padding: 0.3rem 0.5rem;
   font-size: 0.8rem;
 }
-.productDetailContent .detailContent .addToCard {
+.productDetailContent .detailContent .detailContentBottom {
+  display: flex;
+}
+.productDetailContent .detailContent .detailContentBottom .addToCard {
   background: #FC6E1E;
   border: none;
   color: white;
   padding: 0.6rem 1.3rem;
 }
-.productDetailContent .detailContent .addToCard i {
+.productDetailContent .detailContent .detailContentBottom .addToCard i {
   padding-left: 0.3rem;
 }
 @media screen and (max-width: 768px) {
-  .productDetailContent .detailContent .addToCard {
+  .productDetailContent .detailContent .detailContentBottom .addToCard {
     width: 100%;
   }
+}
+.productDetailContent .detailContent .detailContentBottom .bi-heart, .productDetailContent .detailContent .detailContentBottom .bi-heart-fill {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  color: #FC6E1E;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
