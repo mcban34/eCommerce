@@ -14,14 +14,14 @@ fetch("public/product.json")
         const navSlides = gelenVeri.detailImg.map((slide, index) => `<div><a href="#" data-slide="${index + 1}"><img src='${slide.detailImg}'></a></div>`).join("");
 
         const productHTML = `
-    <div class="slider slider-for">
-        ${slides}
-    </div>
-    <div class="action">
-        <div class="slider slider-nav">
-            ${navSlides}
+        <div class="slider slider-for">
+            ${slides}
         </div>
-    </div>`
+        <div class="action">
+            <div class="slider slider-nav">
+                ${navSlides}
+            </div>
+        </div>`
 
         document.querySelector(".productImg").innerHTML = productHTML;
 
@@ -49,34 +49,46 @@ fetch("public/product.json")
                     <i class="bi bi-heart"></i>
                 </div>
             </div>
-
         `
         })
         document.querySelector(".productDetailContent").innerHTML = detailContentHTML.join("")
 
-        //!favorilere ürün eklebdi! test
+        //!favorilere ürün
         let likeKontrol = false
         const likeD = () => {
-            if(likeKontrol==true){
-                likeKontrol=false
-            }
-            else{
-                likeKontrol=true
-            }
+            likeKontrol == true ? likeKontrol=false : likeKontrol=true 
         }
         let likeBtn = document.querySelector(".bi-heart")
+        let notificationBox = document.querySelector(".notificationBox")
         likeBtn.addEventListener("click", function () {
-            // likeBtn.classList.add("");
-            // alert("TEST")
+            const popUp = `
+                <div class="notificationBoxParent">
+                    <div class="notificationBoxText"></div>
+                    <i class="bi bi-x-circle"></i>
+                </div>
+            `
+            notificationBox.innerHTML=popUp
+            notificationBox.style.display="block"
+
+            setTimeout(() => {
+                notificationBox.style.display="none"
+            }, 4000);
+
+            document.querySelector(".bi-x-circle").addEventListener("click",function(){
+                notificationBox.style.display="none"
+            })
             likeD()
-            if(likeKontrol==true){
-                likeBtn.className="bi bi-heart-fill"
+            if (likeKontrol == true) {
+                likeBtn.className = "bi bi-heart-fill"
+                document.querySelector(".notificationBoxText").innerHTML = "Ürün Favoriye Eklendi"
             }
-            else{
-                likeBtn.className="bi bi-heart"
+            else {
+                likeBtn.className = "bi bi-heart"
+                document.querySelector(".notificationBoxText").innerHTML = "Ürün Favoriden Kaldırıldı!"
             }
             console.log(likeKontrol);
         })
+
         if (document.querySelector(".ticked").innerHTML == "undefined") {
             document.querySelector(".ticked").style.display = "none"
         }
@@ -103,3 +115,4 @@ fetch("public/product.json")
             });
         });
     });
+

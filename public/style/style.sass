@@ -190,3 +190,24 @@ img
                 margin-left: 1rem
                 color: $orange
                 cursor: pointer
+
+.notificationBox
+    position: absolute
+    right: 10px
+    bottom: 10px
+    display: none
+    padding: 1rem
+    background: #0fb942
+    color: white
+    .notificationBoxParent
+        display: flex
+        justify-content: space-between
+        .notificationBoxText
+            display: inline-block
+            margin-right: 1rem
+    @media screen and (max-width : 768px)
+        position: fixed
+        width: 100%
+        top: 0
+        right: 0
+        height: 60px
