@@ -281,6 +281,7 @@ $(document).ready(function(){
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 3500,
-      nav:false
+      nav:false,
+      dots:true
     });
 });

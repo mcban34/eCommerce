@@ -233,6 +233,7 @@ img
                     display: flex
                     align-items: center
                     color: white
+                    padding-right: 3rem
                 .slideImg
                     img
                         max-width: 90%
@@ -252,3 +253,14 @@ img
     border: none
     &:focus
         box-shadow: none
+.slick-dots
+    position: absolute
+    top: 0
+    right: 0
+    li
+        position: absolute
+        right: 0
+        top: 30%
+        @for $i from 1 through 100
+            &:nth-child(#{$i})
+                margin-top: $i + rem
