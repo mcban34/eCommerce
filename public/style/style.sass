@@ -243,6 +243,9 @@ img
             .sliderParent
                 .sliderDiv
                     display: block
+                .slideImg
+                    img
+                        max-width: 100% !important
     
 .slick-prev,.slick-next 
     display: none !important
@@ -263,4 +266,14 @@ img
         top: 30%
         @for $i from 1 through 100
             &:nth-child(#{$i})
-                margin-top: $i + rem
+                margin-top: $i * 1.5 + rem
+        button
+            &::before
+                font-size: 1rem
+                border-radius: 0
+                color: white
+    @media screen and (max-width : 500px)
+        display: none !important
+
+.slick-dots li.slick-active button:before
+    color: white 
