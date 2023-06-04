@@ -256,7 +256,7 @@ img {
 
 .header {
   width: 100%;
-  height: 70vh;
+  padding-bottom: 1rem;
   background: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%);
 }
 .header nav .navbar-brand {
@@ -265,6 +265,11 @@ img {
 .header nav .navbar-nav .nav-item .nav-link {
   color: white;
   font-weight: 400;
+}
+.header .sliderContent {
+  width: 100%;
+  height: 60vh;
+  border: 2px solid blue;
 }
 
 .navbar-toggler-icon {

@@ -28,7 +28,7 @@ img
         height: 300px
         overflow: auto
         padding: .5rem
-        &::-webkit-scrollbar 
+        &::-webkit-scrollbar
             width: 10px
         &::-webkit-scrollbar-track
             background-color: transparentize($orange,.9)
@@ -57,7 +57,7 @@ img
                     color: $gray
                 .sepetPrice
                     color: $orange
-        
+
 
 .shopCard
     position: relative
@@ -66,7 +66,7 @@ img
     border-radius: .5rem
     transition: .38s
     .cardImgParent
-        width: 100% 
+        width: 100%
         img
             width: 100%
             text-align: center
@@ -99,7 +99,7 @@ img
             font-size: 1rem
             color: $gray
             text-decoration: line-through
-                
+
     .rating-stars
         .bi-star-fill , .bi-star
             color: #FFD27D
@@ -108,7 +108,7 @@ img
     &:hover
         border-color: $orange
         box-shadow: $boxShadow
-    
+
     .ticket
         position: absolute
         top: 0
@@ -148,7 +148,7 @@ img
             display: block
             .categoryBtn
                 margin-left: 0 !important
-            .categoryBtn,.allProducts 
+            .categoryBtn,.allProducts
                 width: 100%
                 margin-top: .5rem
 
@@ -174,11 +174,11 @@ img
             color: white
             padding: .3rem .5rem
             font-size: .8rem
-        .detailContentBottom    
-            display: flex   
+        .detailContentBottom
+            display: flex
             .addToCard
                 background: $orange
-                border: none    
+                border: none
                 color: white
                 padding: .6rem 1.3rem
                 i
@@ -214,7 +214,7 @@ img
 
 .header
     width: 100%
-    height: 70vh
+    padding-bottom: 1rem
     background: linear-gradient(147deg, #FFE53B 0%, #fd3838 74%)
     nav
         .navbar-brand
@@ -224,7 +224,12 @@ img
                 .nav-link
                     color: white
                     font-weight: 400
-.navbar-toggler-icon 
+    .sliderContent
+        width: 100%
+        height: 60vh
+        border: 2px solid blue
+        
+.navbar-toggler-icon
     background-image: url("../../public/img/menu.png")
 .navbar-toggler
     border: none
