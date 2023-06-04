@@ -267,9 +267,30 @@ img {
   font-weight: 400;
 }
 .header .sliderContent {
-  width: 100%;
-  height: 60vh;
-  border: 2px solid blue;
+  padding: 5rem 0;
+}
+.header .sliderContent .sliderParent .sliderDiv {
+  display: flex;
+}
+.header .sliderContent .sliderParent .sliderDiv .slideContent {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header .sliderContent .sliderParent .sliderDiv .slideImg img {
+  max-width: 90%;
+}
+@media screen and (max-width: 500px) {
+  .header .sliderContent {
+    padding: 3rem 0;
+  }
+  .header .sliderContent .sliderParent .sliderDiv {
+    display: block;
+  }
+}
+
+.slick-prev, .slick-next {
+  display: none !important;
 }
 
 .navbar-toggler-icon {

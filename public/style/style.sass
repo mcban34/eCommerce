@@ -225,10 +225,27 @@ img
                     color: white
                     font-weight: 400
     .sliderContent
-        width: 100%
-        height: 60vh
-        border: 2px solid blue
-        
+        padding: 5rem 0
+        .sliderParent
+            .sliderDiv
+                display: flex
+                .slideContent
+                    display: flex
+                    align-items: center
+                    color: white
+                .slideImg
+                    img
+                        max-width: 90%
+    @media screen and (max-width : 500px)
+        .sliderContent
+            padding: 3rem 0
+            .sliderParent
+                .sliderDiv
+                    display: block
+    
+.slick-prev,.slick-next 
+    display: none !important
+    
 .navbar-toggler-icon
     background-image: url("../../public/img/menu.png")
 .navbar-toggler
