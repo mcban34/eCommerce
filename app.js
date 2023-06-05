@@ -207,7 +207,7 @@ const sepetGuncelle = () => {
                 </div>
             `;
     });
-    document.querySelector(".sepet").innerHTML = sepetYazdir.join("");
+    document.querySelector(".modal-body").innerHTML = sepetYazdir.join("");
 
     //!sepet toplamı
     let sepetToplam = 0;
@@ -270,6 +270,7 @@ const sepeteEkle = () => {
                 price: price,
             };
             sepet.push(eklenenSepet);
+            console.log(sepet);
             sepetGuncelle();
         });
     }
