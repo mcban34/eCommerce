@@ -227,28 +227,49 @@ img
     .sliderContent
         padding: 5rem 0
         .sliderParent
+            background: white
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px
+            border-radius: 1rem
             .sliderDiv
                 display: flex
                 .slideContent
                     display: flex
                     align-items: center
-                    color: white
+                    color: black
                     padding-right: 3rem
+                    a
+                        color: $orange
+                        text-decoration: none
                 .slideImg
+                    position: relative                
                     img
-                        max-width: 90%
-    @media screen and (max-width : 500px)
+                        max-width: 95%
+                        border-radius: 1rem 0 0 1rem
+    @media screen and (max-width : 767px)
+        padding-bottom: 0 !important
         .sliderContent
-            padding: 3rem 0
+            padding: 1rem 0
+            .slideContentFlex
+                padding: 1rem 0rem
             .sliderParent
+                background: transparent
+                box-shadow: none
                 .sliderDiv
                     display: block
+                    .slideContent
+                        color: white
+                        a
+                            color: white
                 .slideImg
                     img
                         max-width: 100% !important
+                        border-radius: 0 !important
     
 .slick-prev,.slick-next 
     display: none !important
+
+.slick-dotted.slick-slider
+    margin-bottom: 0
     
 .navbar-toggler-icon
     background-image: url("../../public/img/menu.png")
@@ -271,9 +292,9 @@ img
             &::before
                 font-size: 1rem
                 border-radius: 0
-                color: white
+                color: $orange
     @media screen and (max-width : 500px)
         display: none !important
 
 .slick-dots li.slick-active button:before
-    color: white 
+    color: $orange 

@@ -269,32 +269,66 @@ img {
 .header .sliderContent {
   padding: 5rem 0;
 }
+.header .sliderContent .sliderParent {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 1rem;
+}
 .header .sliderContent .sliderParent .sliderDiv {
   display: flex;
 }
 .header .sliderContent .sliderParent .sliderDiv .slideContent {
   display: flex;
   align-items: center;
-  color: white;
+  color: black;
   padding-right: 3rem;
 }
-.header .sliderContent .sliderParent .sliderDiv .slideImg img {
-  max-width: 90%;
+.header .sliderContent .sliderParent .sliderDiv .slideContent a {
+  color: #FC6E1E;
+  text-decoration: none;
 }
-@media screen and (max-width: 500px) {
+.header .sliderContent .sliderParent .sliderDiv .slideImg {
+  position: relative;
+}
+.header .sliderContent .sliderParent .sliderDiv .slideImg img {
+  max-width: 95%;
+  border-radius: 1rem 0 0 1rem;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding-bottom: 0 !important;
+  }
   .header .sliderContent {
-    padding: 3rem 0;
+    padding: 1rem 0;
+  }
+  .header .sliderContent .slideContentFlex {
+    padding: 1rem 0rem;
+  }
+  .header .sliderContent .sliderParent {
+    background: transparent;
+    box-shadow: none;
   }
   .header .sliderContent .sliderParent .sliderDiv {
     display: block;
   }
+  .header .sliderContent .sliderParent .sliderDiv .slideContent {
+    color: white;
+  }
+  .header .sliderContent .sliderParent .sliderDiv .slideContent a {
+    color: white;
+  }
   .header .sliderContent .sliderParent .slideImg img {
     max-width: 100% !important;
+    border-radius: 0 !important;
   }
 }
 
 .slick-prev, .slick-next {
   display: none !important;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
 
 .navbar-toggler-icon {
@@ -621,7 +655,7 @@ img {
 .slick-dots li button::before {
   font-size: 1rem;
   border-radius: 0;
-  color: white;
+  color: #FC6E1E;
 }
 @media screen and (max-width: 500px) {
   .slick-dots {
@@ -630,5 +664,5 @@ img {
 }
 
 .slick-dots li.slick-active button:before {
-  color: white;
+  color: #FC6E1E;
 }/*# sourceMappingURL=style.css.map */
