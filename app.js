@@ -191,7 +191,7 @@ toplamFiyatText.style.marginTop = "1rem"
 toplamFiyatText.style.color = "#FC6E1E"
 
 const sepetGuncelle = () => {
-    document.querySelector(".sepet").style.height = "300px"
+    // document.querySelector(".sepet").style.height = "300px"
 
     let sepetYazdir = sepet.map((value, index) => {
         return `
@@ -214,9 +214,9 @@ const sepetGuncelle = () => {
     for (const i of sepet) {
         sepetToplam += i.price;
     }
-    toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
-    document.querySelector(".sepetParent").appendChild(toplamFiyatText);
-    document.querySelector(".toplamFiyatText").style.marginTop = "1rem"
+    // toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
+    // document.querySelector(".sepetParent").appendChild(toplamFiyatText);
+    // document.querySelector(".toplamFiyatText").style.marginTop = "1rem"
 
 
     //!sepet delete
@@ -229,11 +229,12 @@ const sepetGuncelle = () => {
             sepetGuncelle();
         });
     }
-    if (sepetToplam == 0.00) {
-        toplamFiyatText.innerHTML = "Sepetinizde Ürün Bulunmuyor!"
-        document.querySelector(".sepet").style.height = "0px"
-        document.querySelector(".toplamFiyatText").style.marginTop = "0px"
-    }
+    document.querySelector(".badge").innerHTML=`${sepet.length}`
+    // if (sepetToplam == 0.00) {
+    //     toplamFiyatText.innerHTML = "Sepetinizde Ürün Bulunmuyor!"
+    //     document.querySelector(".sepet").style.height = "0px"
+    //     document.querySelector(".toplamFiyatText").style.marginTop = "0px"
+    // }
 };
 
 const urunDetay = () => {
@@ -271,6 +272,7 @@ const sepeteEkle = () => {
             };
             sepet.push(eklenenSepet);
             console.log(sepet);
+            document.querySelector(".badge").innerHTML=`${sepet.length}`
             sepetGuncelle();
         });
     }
