@@ -662,4 +662,8 @@ img {
 
 .slick-dots li.slick-active button:before {
   color: #FC6E1E;
+}
+
+.modalBtn .badge {
+  top: 15% !important;
 }/*# sourceMappingURL=style.css.map */
