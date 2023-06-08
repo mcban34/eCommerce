@@ -218,7 +218,7 @@ const sepetGuncelle = () => {
         sepetToplam += i.price;
     }
     // console.log(`Sepet Toplam : ${sepetToplam}`);
-    document.querySelector(".sepetToplam").innerHTML=`Toplam : ${sepetToplam}₺`
+    document.querySelector(".sepetToplam").innerHTML=`Toplam : ${sepetToplam.toFixed(2)}₺`
     // toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
     // document.querySelector(".sepetParent").appendChild(toplamFiyatText);
     // document.querySelector(".toplamFiyatText").style.marginTop = "1rem"
