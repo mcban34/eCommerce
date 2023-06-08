@@ -182,6 +182,9 @@ fetch("public/product.json")
             });
         }
         urunDetay();
+        if(sepet.length==0){
+            document.querySelector(".modal-body").innerHTML="Sepetinizde Ürün Bulunmuyor!"
+        }
     });
 
 
@@ -224,9 +227,13 @@ const sepetGuncelle = () => {
     for (const button of deleteButtons) {
         button.addEventListener("click", function (event) {
             let index = event.target.dataset.index;
-            console.log(index);
+            // console.log(index);
             sepet.splice(index, 1);
             sepetGuncelle();
+            console.log(sepet.length)
+            if(sepet.length==0){
+                document.querySelector(".modal-body").innerHTML="Sepetinizde Ürün Bulunmuyor!"
+            }
         });
     }
     document.querySelector(".badge").innerHTML=`${sepet.length}`
@@ -261,7 +268,7 @@ const sepeteEkle = () => {
 
             const eskiUrun = sepet.find((urun) => urun.title === title);
             if (eskiUrun) {
-                console.log(eskiUrun);
+                // console.log(eskiUrun);
                 return
             }
 
@@ -271,7 +278,7 @@ const sepeteEkle = () => {
                 price: price,
             };
             sepet.push(eklenenSepet);
-            console.log(sepet);
+            // console.log(sepet);
             document.querySelector(".badge").innerHTML=`${sepet.length}`
             sepetGuncelle();
         });
