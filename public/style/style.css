@@ -666,4 +666,18 @@ img {
 
 .modalBtn .badge {
   top: 15% !important;
+}
+
+.modal-footer {
+  justify-content: space-between;
+}
+.modal-footer .sepetToplam {
+  color: #FC6E1E;
+}
+.modal-footer button {
+  background: #fa3a3a;
+  border: none;
+}
+.modal-footer button:hover {
+  background: #fa3a3a;
 }/*# sourceMappingURL=style.css.map */
