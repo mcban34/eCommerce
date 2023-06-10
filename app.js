@@ -323,9 +323,9 @@ const sepeteEkle = () => {
             // console.log(sepetEklendiParent);
             setTimeout(() => {
                 sepetEklendiParent.style.display = "none"
-            }, 20000);
+            }, 4000);
 
-            
+
             // let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
             // sepeteEklendiPopup.style.display = "flex"
 
