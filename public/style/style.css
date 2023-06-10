@@ -649,4 +649,12 @@ img {
 }
 .sepeteEklendiPopup h6 {
   margin-bottom: 0 !important;
+}
+
+.sepetBox {
+  display: flex;
+  align-items: center;
+}
+.sepetBox .sepetContent .fiyat {
+  color: #FC6E1E;
 }/*# sourceMappingURL=style.css.map */
