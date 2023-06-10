@@ -636,4 +636,24 @@ img {
 }
 .modal-footer button:hover {
   background: #fa3a3a;
+}
+
+.sepeteEklendiPopup {
+  display: flex;
+  align-items: center;
+  background: #0fb942;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 1rem 1.5rem;
+  color: white;
+  border-radius: 5px;
+  display: none;
+}
+.sepeteEklendiPopup h6 {
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+.sepeteEklendiPopup i {
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -283,6 +283,13 @@ const sepeteEkle = () => {
             // console.log(sepet);
             document.querySelector(".badge").innerHTML=`${sepet.length}`
             sepetGuncelle();
+
+            let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
+            sepeteEklendiPopup.style.display="flex"
+
+            document.querySelector(".sepetEklendiClose").addEventListener("click",function(){
+                sepeteEklendiPopup.style.display="none"
+            })
         });
     }
 }
