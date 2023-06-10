@@ -182,8 +182,8 @@ fetch("public/product.json")
             });
         }
         urunDetay();
-        if(sepet.length==0){
-            document.querySelector(".modal-body").innerHTML="Sepetinizde Ürün Bulunmuyor!"
+        if (sepet.length == 0) {
+            document.querySelector(".modal-body").innerHTML = "Sepetinizde Ürün Bulunmuyor!"
         }
     });
 
@@ -218,7 +218,7 @@ const sepetGuncelle = () => {
         sepetToplam += i.price;
     }
     // console.log(`Sepet Toplam : ${sepetToplam}`);
-    document.querySelector(".sepetToplam").innerHTML=`Toplam : ${sepetToplam.toFixed(2)}₺`
+    document.querySelector(".sepetToplam").innerHTML = `Toplam : ${sepetToplam.toFixed(2)}₺`
     // toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
     // document.querySelector(".sepetParent").appendChild(toplamFiyatText);
     // document.querySelector(".toplamFiyatText").style.marginTop = "1rem"
@@ -233,12 +233,12 @@ const sepetGuncelle = () => {
             sepet.splice(index, 1);
             sepetGuncelle();
             console.log(sepet.length)
-            if(sepet.length==0){
-                document.querySelector(".modal-body").innerHTML="Sepetinizde Ürün Bulunmuyor!"
+            if (sepet.length == 0) {
+                document.querySelector(".modal-body").innerHTML = "Sepetinizde Ürün Bulunmuyor!"
             }
         });
     }
-    document.querySelector(".badge").innerHTML=`${sepet.length}`
+    document.querySelector(".badge").innerHTML = `${sepet.length}`
     // if (sepetToplam == 0.00) {
     //     toplamFiyatText.innerHTML = "Sepetinizde Ürün Bulunmuyor!"
     //     document.querySelector(".sepet").style.height = "0px"
@@ -281,26 +281,67 @@ const sepeteEkle = () => {
             };
             sepet.push(eklenenSepet);
             // console.log(sepet);
-            document.querySelector(".badge").innerHTML=`${sepet.length}`
+            document.querySelector(".badge").innerHTML = `${sepet.length}`
             sepetGuncelle();
 
-            let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
-            sepeteEklendiPopup.style.display="flex"
+            //!sepete eklendi popup
 
-            document.querySelector(".sepetEklendiClose").addEventListener("click",function(){
-                sepeteEklendiPopup.style.display="none"
-            })
+            // let sepeteEklendiHTML = `
+            //     <div class="sepeteEklendiPopup">
+            //         <h6>Ürün Sepete Eklendi!</h6>
+            //         <i class="bi bi-x-circle sepetEklendiClose"></i>
+            //     </div>
+            // `
+            
+            let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
+            // let sepeteEklendiPopup = document.createElement("div")
+            // sepeteEklendiPopup.className="sepeteEklendiPopup"
+
+            let sepetEklendiParent = document.createElement("div")
+            sepetEklendiParent.className="sepetEklendiParent"
+            // sepetEklendiParent.style.background="#0fb942"
+            sepetEklendiParent.style.cssText="display:flex;background:#0fb942;padding:1rem;margin-bottom:1rem"
+
+            let sepetEklendiText = document.createElement("h6")
+            sepetEklendiText.innerHTML="Ürün Sepete Eklendi!"
+            sepetEklendiText.style.marginRight="1rem"
+
+            let sepetEklendiAhref = document.createElement("a")
+            sepetEklendiAhref.innerHTML="Sepete Git"
+            sepetEklendiAhref.className="sepeteGit"
+            sepetEklendiAhref.href="basket.html"
+            sepetEklendiAhref.style.paddingBottom="7px"
+            sepetEklendiAhref.style.color="white"
+
+            sepetEklendiParent.append(sepetEklendiText,sepetEklendiAhref)
+
+            sepeteEklendiPopup.append(sepetEklendiParent)
+            
+            // sepetEklendiCloseBtn.addEventListener("click", function () {
+            //     sepetEklendiParent.style.display = "none"
+            // })
+            // console.log(sepetEklendiParent);
+            setTimeout(() => {
+                sepetEklendiParent.style.display = "none"
+            }, 20000);
+
+            
+            // let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
+            // sepeteEklendiPopup.style.display = "flex"
+
+
+
         });
     }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.sliderParent').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2500,
-      nav:false,
-      dots:true
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        nav: false,
+        dots: true
     });
 });
