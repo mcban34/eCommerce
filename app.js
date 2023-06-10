@@ -1,4 +1,5 @@
-let sepet = [];
+let sepet = JSON.parse(localStorage.getItem("sepet")) || []
+
 let urunId = 0;
 
 let loadingDivParent = document.createElement("div");
@@ -194,6 +195,7 @@ toplamFiyatText.style.marginTop = "1rem"
 toplamFiyatText.style.color = "#FC6E1E"
 
 const sepetGuncelle = () => {
+    console.log(sepet);
     let sepetYazdir = sepet.map((value, index) => {
         return `
                 <div class="sepetCard">
@@ -228,10 +230,13 @@ const sepetGuncelle = () => {
             if (sepet.length == 0) {
                 document.querySelector(".modal-body").innerHTML = "Sepetinizde Ürün Bulunmuyor!"
             }
+            localStorage.setItem("sepet",JSON.stringify(sepet))
         });
     }
     document.querySelector(".badge").innerHTML = `${sepet.length}`
 };
+
+document.addEventListener("DOMContentLoaded",sepetGuncelle())
 
 const urunDetay = () => {
     let urunIncele = document.querySelectorAll(".urunIncele");
