@@ -194,8 +194,6 @@ toplamFiyatText.style.marginTop = "1rem"
 toplamFiyatText.style.color = "#FC6E1E"
 
 const sepetGuncelle = () => {
-    // document.querySelector(".sepet").style.height = "300px"
-
     let sepetYazdir = sepet.map((value, index) => {
         return `
                 <div class="sepetCard">
@@ -217,19 +215,13 @@ const sepetGuncelle = () => {
     for (const i of sepet) {
         sepetToplam += i.price;
     }
-    // console.log(`Sepet Toplam : ${sepetToplam}`);
     document.querySelector(".sepetToplam").innerHTML = `Toplam : ${sepetToplam.toFixed(2)}₺`
-    // toplamFiyatText.innerHTML = `Toplam Fiyat: ${sepetToplam.toFixed(2)}₺`;
-    // document.querySelector(".sepetParent").appendChild(toplamFiyatText);
-    // document.querySelector(".toplamFiyatText").style.marginTop = "1rem"
-
 
     //!sepet delete
     let deleteButtons = document.querySelectorAll(".delete");
     for (const button of deleteButtons) {
         button.addEventListener("click", function (event) {
             let index = event.target.dataset.index;
-            // console.log(index);
             sepet.splice(index, 1);
             sepetGuncelle();
             console.log(sepet.length)
@@ -239,11 +231,6 @@ const sepetGuncelle = () => {
         });
     }
     document.querySelector(".badge").innerHTML = `${sepet.length}`
-    // if (sepetToplam == 0.00) {
-    //     toplamFiyatText.innerHTML = "Sepetinizde Ürün Bulunmuyor!"
-    //     document.querySelector(".sepet").style.height = "0px"
-    //     document.querySelector(".toplamFiyatText").style.marginTop = "0px"
-    // }
 };
 
 const urunDetay = () => {
@@ -270,7 +257,6 @@ const sepeteEkle = () => {
 
             const eskiUrun = sepet.find((urun) => urun.title === title);
             if (eskiUrun) {
-                // console.log(eskiUrun);
                 return
             }
 
@@ -280,26 +266,14 @@ const sepeteEkle = () => {
                 price: price,
             };
             sepet.push(eklenenSepet);
-            // console.log(sepet);
             document.querySelector(".badge").innerHTML = `${sepet.length}`
             sepetGuncelle();
 
             //!sepete eklendi popup
-
-            // let sepeteEklendiHTML = `
-            //     <div class="sepeteEklendiPopup">
-            //         <h6>Ürün Sepete Eklendi!</h6>
-            //         <i class="bi bi-x-circle sepetEklendiClose"></i>
-            //     </div>
-            // `
-            
             let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
-            // let sepeteEklendiPopup = document.createElement("div")
-            // sepeteEklendiPopup.className="sepeteEklendiPopup"
 
             let sepetEklendiParent = document.createElement("div")
             sepetEklendiParent.className="sepetEklendiParent"
-            // sepetEklendiParent.style.background="#0fb942"
             sepetEklendiParent.style.cssText="display:flex;background:#0fb942;padding:1rem;margin-bottom:1rem"
 
             let sepetEklendiText = document.createElement("h6")
@@ -316,21 +290,12 @@ const sepeteEkle = () => {
             sepetEklendiParent.append(sepetEklendiText,sepetEklendiAhref)
 
             sepeteEklendiPopup.append(sepetEklendiParent)
-            
-            // sepetEklendiCloseBtn.addEventListener("click", function () {
-            //     sepetEklendiParent.style.display = "none"
-            // })
-            // console.log(sepetEklendiParent);
+
             setTimeout(() => {
                 sepetEklendiParent.style.display = "none"
             }, 4000);
 
-
-            // let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
-            // sepeteEklendiPopup.style.display = "flex"
-
-
-
+            localStorage.setItem("sepet",JSON.stringify(sepet))
         });
     }
 }

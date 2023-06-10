@@ -630,12 +630,12 @@ img {
 .modal-footer .sepetToplam {
   color: #FC6E1E;
 }
-.modal-footer button {
-  background: #fa3a3a;
-  border: none;
-}
-.modal-footer button:hover {
-  background: #fa3a3a;
+.modal-footer .sepeteGit {
+  background: #FC6E1E;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.3rem;
+  border-radius: 0.3rem;
 }
 
 .sepeteEklendiPopup {
