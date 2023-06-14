@@ -260,8 +260,31 @@ const sepeteEkle = () => {
             let title = cardParentNode.querySelector(".cardTitle").innerHTML;
             let price = Number(cardParentNode.querySelector(".price").innerHTML);
 
+            let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
             const eskiUrun = sepet.find((urun) => urun.title === title);
             if (eskiUrun) {
+                let sepetAyniUrunParent = document.createElement("div")
+                sepetAyniUrunParent.className="sepetAynıUrunParent"
+                sepetAyniUrunParent.style.cssText="display:flex;align-items:center;background:red;padding:1rem;margin-bottom:1rem"
+
+                let sepetAyniUrunText = document.createElement("h6")
+                sepetAyniUrunText.innerHTML="Sepette Aynı Ürün Mevcut!"
+                sepetAyniUrunText.style.marginRight="1rem"
+
+                let sepetAyniUrunAhref = document.createElement("a")
+                sepetAyniUrunAhref.innerHTML="Sepete Git"
+                sepetAyniUrunAhref.className="sepeteGit"
+                sepetAyniUrunAhref.href="basket.html"
+                sepetAyniUrunAhref.style.paddingBottom="7px"
+                sepetAyniUrunAhref.style.color="white"
+
+                sepetAyniUrunParent.append(sepetAyniUrunText,sepetAyniUrunAhref)
+                sepeteEklendiPopup.append(sepetAyniUrunParent)
+
+                setTimeout(() => {
+                    sepetAyniUrunParent.style.display = "none"
+                }, 2000);
+
                 return
             }
 
@@ -275,11 +298,10 @@ const sepeteEkle = () => {
             sepetGuncelle();
 
             //!sepete eklendi popup
-            let sepeteEklendiPopup = document.querySelector(".sepeteEklendiPopup")
 
             let sepetEklendiParent = document.createElement("div")
             sepetEklendiParent.className="sepetEklendiParent"
-            sepetEklendiParent.style.cssText="display:flex;background:#0fb942;padding:1rem;margin-bottom:1rem"
+            sepetEklendiParent.style.cssText="display:flex;align-items:center;justify-content:space-between;background:#0fb942;padding:1rem;margin-bottom:1rem"
 
             let sepetEklendiText = document.createElement("h6")
             sepetEklendiText.innerHTML="Ürün Sepete Eklendi!"
