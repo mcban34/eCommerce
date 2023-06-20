@@ -74,8 +74,6 @@ fetch("public/product.json")
         }
         ticketCheck();
         sepeteEkle()
-
-
         //!kategori
         let Allcategory = value.map(value => {
             return value.category;
